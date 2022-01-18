@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+body {
+  font-family: Nunito, sans;
+  margin: 0 auto;
+  /*  */
+}
+
+.page_body {
+  background-image: url(./assets/img/bigCircle.png);
+  background-repeat: no-repeat;
+  /* background-size: 230px; */
+  background-position-x: right;
+}
+.imgBg {
+  z-index: -2;
+  max-width: 100%;
+  width: 100px;
+}
