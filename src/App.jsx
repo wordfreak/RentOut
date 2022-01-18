@@ -3,6 +3,7 @@ import { useState } from "react";
 import smallBox from "./assets/img/smallCircle.png";
 import "./App.css";
 import Nav from "./components/Nav";
+import Header from "./components/Header";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
 
       <div className="container mx-auto z-10">
         <Nav />
+        <Header />
       </div>
     </div>
   );

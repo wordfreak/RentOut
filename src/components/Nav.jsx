@@ -10,9 +10,9 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-transparent ">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between">
+    <nav className="bg-transparent md:pt-5 ">
+      <div className=" mx-auto ">
+        <div className="flex justify-between items-center">
           <div className="flex space-x-20 h-16 items-center">
             <div>
               {/* <!-- Website Logo --> */}
@@ -47,10 +47,7 @@ const Nav = () => {
           </div>
           {/* <!-- Secondary Navbar items --> */}
           <div className="hidden md:flex items-center space-x-3 ">
-            <a
-              href=""
-              className="py-2 px-2 font-medium  bg-primary text-yellow text-xl rounded  transition duration-300"
-            >
+            <a href="" className="btn bg-primary text-yellow btn_shadow ">
               Join our waitlist
             </a>
           </div>
