@@ -12,7 +12,7 @@ const App = () => {
       <img src={smallBox} alt="smallBox" className="absolute w-52 imgBg" />
       {/* small boxx div  */}
 
-      <div className="container mx-auto z-10">
+      <div>
         <Nav />
         <Header />
       </div>

@@ -31,5 +31,5 @@ body {
 }
 
 .btn {
-  @apply py-2 px-2 font-medium    text-xl rounded-lg;
+  @apply py-2 px-2 w-48 h-16 flex justify-center items-center font-medium    text-xl rounded-md;
 }
