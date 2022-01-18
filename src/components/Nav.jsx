@@ -59,11 +59,11 @@ const Nav = () => {
       </div>
       {/* <!-- mobile menu --> */}
       <div className={showNav ? "block" : "hidden"}>
-        <ul className="">
+        <ul className="absolute bg-yellow w-full left-0 text-primary">
           <li className="active">
             <a
               href="index.html"
-              className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold"
+              className="block text-sm px-2 py-4 text-orange  font-semibold"
             >
               Home
             </a>
@@ -71,7 +71,7 @@ const Nav = () => {
           <li>
             <a
               href="#services"
-              className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
+              className="block text-sm px-2 py-4  transition duration-300"
             >
               Services
             </a>
@@ -79,7 +79,7 @@ const Nav = () => {
           <li>
             <a
               href="#about"
-              className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
+              className="block text-sm px-2 py-4  transition duration-300"
             >
               About
             </a>
@@ -87,7 +87,7 @@ const Nav = () => {
           <li>
             <a
               href="#contact"
-              className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
+              className="block text-sm px-2 py-4  transition duration-300"
             >
               Contact Us
             </a>

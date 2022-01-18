@@ -3,6 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  /* border: 1px solid red; */
+}
 
 button {
   cursor: pointer;
@@ -14,13 +17,20 @@ body {
   margin: 0 auto;
   /*  */
 }
+.content {
+  max-width: 1048px;
+  margin: 0 auto;
+}
 
 .page_body {
   background-image: url(./assets/img/bigCircle.png);
   background-repeat: no-repeat;
   /* background-size: 230px; */
   background-position-x: right;
+  max-width: 1440px;
+  margin: 0 auto;
 }
+
 .imgBg {
   z-index: -2;
   max-width: 100%;
@@ -31,5 +41,20 @@ body {
 }
 
 .btn {
-  @apply py-2 px-2 w-48 h-16 flex justify-center items-center font-medium    text-xl rounded-md;
+  @apply py-2 px-2 w-48 h-16 flex justify-center items-center font-medium  rounded-md;
+  font-size: 19px;
+}
+.col2 {
+  /* min-height: 600px; */
+}
+
+@media screen and (max-width: 768px) {
+  .page_body {
+    background-image: url(./assets/img/halfCircle.png);
+    background-size: 70%;
+    background-position: right 550px;
+  }
+  /* .bigMan {
+    width: 342.55px;
+  } */
 }
