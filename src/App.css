@@ -3,6 +3,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 * {
   /* border: 1px solid red; */
 }
@@ -25,9 +27,9 @@ body {
 .page_body {
   background-image: url(./assets/img/bigCircle.png);
   background-repeat: no-repeat;
-  /* background-size: 230px; */
+  background-size: 40%;
   background-position-x: right;
-  max-width: 1440px;
+  max-width: 1440px;  
   margin: 0 auto;
 }
 
@@ -51,10 +53,10 @@ body {
 @media screen and (max-width: 768px) {
   .page_body {
     background-image: url(./assets/img/halfCircle.png);
-    background-size: 70%;
+    background-size: 240px;
     background-position: right 550px;
   }
-  /* .bigMan {
-    width: 342.55px;
-  } */
+  .bigMan {
+    height: 550px;
+  }
 }

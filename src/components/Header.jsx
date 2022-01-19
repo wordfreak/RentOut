@@ -24,17 +24,17 @@ const Header = () => {
             </p>
           </div>
         </div>
-        <div className="w-full md:w-1/2  bigMan">
-          <div className="relative -top-20">
+        <div className="w-full md:w-1/2  relative bigMan border-2">
+          <div className="relative -top-24">
             <img
               src={Saly}
               alt="saly svg"
-              className="absolute w-28 md:-left-6"
+              className="absolute w-28 top-64 md:top-0 md:-left-6"
             />
             <img
               src={bigMan}
               alt="Big Man pic"
-              className="bigMan  md:absolute md:-top-56 md:-right-24"
+              className="bigMan right-  top-32 absolute md:-top-60 md:-right-24"
             />
           </div>
         </div>
