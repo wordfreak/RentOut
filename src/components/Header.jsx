@@ -16,7 +16,7 @@ const Header = () => {
             </p>
             <p className="text-center md:text-left">
               <a
-                href=""
+                href="#"
                 className="btn bg-orange text-white mx-auto md:mx-0  inline-block mt-5 btn_shadow"
               >
                 Get exclusive access
