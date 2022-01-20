@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   /* border: 1px solid red; */
 }
@@ -27,9 +26,10 @@ body {
 .page_body {
   background-image: url(./assets/img/bigCircle.png);
   background-repeat: no-repeat;
-  background-size: 40%;
+  /* background-size: 40%; */
   background-position-x: right;
-  max-width: 1440px;  
+
+  /* max-width: 1440px; */
   margin: 0 auto;
 }
 
@@ -54,9 +54,10 @@ body {
   .page_body {
     background-image: url(./assets/img/halfCircle.png);
     background-size: 240px;
-    background-position: right 550px;
+    background-position: right 540px;
+    max-width: 100%;
   }
   .bigMan {
-    height: 550px;
+    min-height: 550px;
   }
 }
