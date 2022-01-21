@@ -21,15 +21,29 @@ const App = () => {
       />
       {/* small box div  */}
 
-      <div className="px-4">
+      <div className="">
         <div className="content">
-          <Nav />
-          <Header />
-          <Platform />
-          <Account />
-          <Ar />
-          <Offers />
-          <Social />
+          <div className="px-4">
+            <Nav />
+          </div>
+          <div className="px-4">
+            <Header />
+          </div>
+          <div className="px-4">
+            <Platform />
+          </div>
+          <div className="px-4">
+            <Account />
+          </div>
+          <div className="px-4">
+            <Ar />
+          </div>
+          <div className="">
+            <Offers />
+          </div>
+          <div className="px-4">
+            <Social />
+          </div>
         </div>
       </div>
     </div>
