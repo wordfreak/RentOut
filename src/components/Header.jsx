@@ -1,5 +1,5 @@
 import React from "react";
-import Saly from "../assets/img/saly.png";
+import Saly from "../assets/img/Saly.png";
 import mobileSaly from "../assets/img/mobileSaly.png";
 import bigMan from "../assets/img/bigMan.png";
 import OrangeBox from "../assets/img/OrangeEllipse.png";
