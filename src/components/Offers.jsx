@@ -3,7 +3,7 @@ import React from "react";
 const Offers = () => {
   return (
     <div className="mt-44">
-      <div className="ar flex flex-wrap">
+      <div className="ar flex flex-col-reverse md:flex-row ">
         <div className="w-full md:w-1/2 flex items-center justify-center md:px-12 text-center md:text-left">
           <div>
             <h1 className="font-bold text-1xl md:text-6xl">

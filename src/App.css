@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 button {
@@ -54,7 +54,7 @@ body {
     rgba(237, 238, 246, 0) 98.52%
   );
   border-radius: 50px;
-  /* min-height: 576px; */
+  min-height: 576px;
 }
 
 @media screen and (max-width: 768px) {
