@@ -3,7 +3,7 @@ import Screen from "../assets/img/phone.png";
 import YellowBox from "../assets/img/smallCircle2.png";
 import BlueBox from "../assets/img/blueBox.png";
 import OrangeBox from "../assets/img/bigOrange.png";
-import smallBox from "../assets/img/smallBox.png";
+import smallBox from "../assets/img/smallbox.png";
 import BigBlue from "../assets/img/BigBlue.png";
 
 const Ar = () => {
