@@ -4,7 +4,7 @@ import Screen from "../assets/img/phone.png";
 const Platform = () => {
   return (
     <div className=" mt-16 md:mt-64">
-      <div className="flex flex-col-reverse  ">
+      <div className="flex flex-col-reverse md:flex-row  ">
         <div className="wfull md:w-1/2">
           {/* <img src="" alt="" /> */}
           <img src={Screen} alt="srceens" className="block  mx-auto" />

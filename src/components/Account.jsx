@@ -4,8 +4,8 @@ import Screen from "../assets/img/phone.png";
 const Account = () => {
   return (
     <div className="mt-20">
-      <div className=" flex flex-col-reverse ">
-        <div className="wfull md:w-1/2">
+      <div className=" flex md:flex-row flex-col-reverse ">
+        <div className="w-full md:w-1/2">
           {/* <img src="" alt="" /> */}
           <img src={Screen} alt="srceens" className="block  mx-auto" />
           {/* <img src="" alt="" /> */}
