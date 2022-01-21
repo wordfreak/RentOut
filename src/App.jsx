@@ -5,6 +5,8 @@ import "./App.css";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Account from "./components/Account";
+import Platform from "./components/Platform";
+import Ar from "./components/Ar";
 
 const App = () => {
   return (
@@ -21,7 +23,9 @@ const App = () => {
         <div className="content">
           <Nav />
           <Header />
+          <Platform />
           <Account />
+          <Ar />  
         </div>
       </div>
     </div>
