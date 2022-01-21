@@ -12,7 +12,7 @@ const Ar = () => {
       <img
         src={OrangeBox}
         alt="Orange Box"
-        className="absolute right-2 -top-28"
+        className="absolute right-2 -top-28 hidden md:inline-block"
       />
       <div className="ar flex flex-wrap">
         <div className="w-full md:w-1/2 relative flex items-center justify-center md:px-12 text-center md:text-left">
@@ -28,24 +28,28 @@ const Ar = () => {
             <img
               src={YellowBox}
               alt="yellow Box"
-              className="absolute -bottom-14 left-64"
+              className="absolute -bottom-14 left-64 hidden md:inline-block"
             />
           </div>
         </div>
 
         <div className="w-full md:w-1/2 flex items-center justify-center relative ">
           <img src={Screen} alt="Mobile pic" className="block z-50" />
-          <img src={BigBlue} alt="BigBlue" className="absolute" />
+          <img
+            src={BigBlue}
+            alt="BigBlue"
+            className="absolute hidden md:inline-block"
+          />
           <img
             src={BlueBox}
             alt="Blue Box"
-            className="absolute  -left-8 top-20"
+            className="absolute  -left-8 top-20 hidden md:inline-block"
           />
 
           <img
             src={smallBox}
             alt="small Box"
-            className="absolute right-5 top-32"
+            className="absolute right-5 top-32 hidden md:inline-block"
           />
         </div>
       </div>

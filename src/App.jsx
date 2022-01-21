@@ -8,6 +8,7 @@ import Account from "./components/Account";
 import Platform from "./components/Platform";
 import Ar from "./components/Ar";
 import Offers from "./components/Offers";
+import Social from "./components/Social";
 
 const App = () => {
   return (
@@ -26,8 +27,9 @@ const App = () => {
           <Header />
           <Platform />
           <Account />
-          <Ar />  
+          <Ar />
           <Offers />
+          <Social />
         </div>
       </div>
     </div>
