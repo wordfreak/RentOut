@@ -1,26 +1,18 @@
 import React from "react";
-import Saly from "../assets/img/Saly.png";
-import mobileSaly from "../assets/img/mobileSaly.png";
-import bigMan from "../assets/img/bigMan.png";
-import OrangeBox from "../assets/img/OrangeEllipse.png";
-import YellowBox from "../assets/img/smallEllipse.png";
-import MobileBigMan from "../assets/img/mobileBigMan.png";
-import MediumCircle from "../assets/img/MeduimCircle.png";
+import Camera from "../assets/img/camera.png";
 const Header = () => {
   return (
     <div>
-      <div className="block md:flex items-center mt-16 md:mt-28  justify-between">
-        <div className="w-full md:w-1/2 ">
+      <div className="block md:flex items-center mt-20 md:mt-36  justify-between">
+        <div className="w-full md:w-1/2  ">
           <div className="relative">
             {/* pink box  */}
-            <img
-              src={OrangeBox}
-              alt="pink box"
-              className="hidden md:inline-block absolute bottom-20 -left-40"
-            />
+            <div className="hidden md:inline-block absolute bottom-20 -top-5 -left-48 border bg-orange w-14 h-14 rounded-full">
+              {" "}
+            </div>
 
             <h1 className="text-primary text-4xl md:text-6xl font-bold mb-8 text-center md:text-left">
-              Now everything is yours!
+              Now everything <br /> is yours!
             </h1>
             <p className="text-xl md:w-10/12 text-center md:text-left leading-9 text-text">
               We're making it possible to rent anything, from wigs, gadgets,
@@ -31,46 +23,17 @@ const Header = () => {
                 href="#"
                 className="btn bg-orange text-white mx-auto md:mx-0  inline-block mt-5 btn_shadow"
               >
-                Get exclusive access
+                Get access Now!
               </a>
             </p>
+            <div className="w-24 h-24 hidden md:inline-block bg-yellow rounded-full absolute -bottom-4 right-28"></div>
           </div>
         </div>
-        <div className="w-full md:w-1/2  relative  bigMan overflow-hidden md:overflow-visible ">
-          <div className="relative -top-24">
-            <img
-              src={YellowBox}
-              alt="yellow box"
-              className="absolute top-56 right-60  md:-top-32 md:left-5"
-            />
+        <div className="w-full md:w-1/2 mt-16 md:mt-0 relative  bigMan overflow-hidden md:overflow-visible ">
+          <div className="">
+            <div className="absolute -top-56 right-60  md:-top-24 md:left-5 bg-orange w-12 h-12 rounded-full"></div>
 
-            <img
-              src={Saly}
-              alt="saly svg"
-              className=" hidden md:block absolute w-28 top-64 md:top-0 md:-left-6"
-            />
-            <img
-              src={bigMan}
-              alt="Big Man pic"
-              className="bigMan hidden md:block top-32 absolute md:-top-60 md:-right-24"
-            />
-            {/* mobile view  */}
-            <img
-              src={mobileSaly}
-              alt="sally svg"
-              className="md:hidden absolute top-96  sm:pt-16 right-64 sm:right-72"
-            />
-            <img
-              src={MobileBigMan}
-              alt="Big Man pic"
-              className="md:hidden w-72  absolute top-60 -right-8"
-            />
-
-            <img
-              src={MediumCircle}
-              alt="meduim circle"
-              className=" top-96 pt-36 right-32 md:-left-28 md:-bottom-96 md:top-auto absolute"
-            />
+            <img src={Camera} alt="Big Man pic" className="" />
           </div>
         </div>
       </div>

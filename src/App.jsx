@@ -9,6 +9,8 @@ import Platform from "./components/Platform";
 import Ar from "./components/Ar";
 import Offers from "./components/Offers";
 import Social from "./components/Social";
+import Club from "./components/Club";
+import GetAccess from "./components/GetAccess";
 
 const App = () => {
   return (
@@ -30,17 +32,27 @@ const App = () => {
             <Header />
           </div>
           <div className="px-4">
-            <Platform />
-          </div>
-          <div className="px-4">
             <Account />
           </div>
+          <div className="px-4">
+            <Club />
+          </div>
+
+          <div className="px-4">
+            <Platform />
+          </div>
+
           <div className="px-4">
             <Ar />
           </div>
           <div className="">
             <Offers />
           </div>
+
+          <div className="px-4">
+            <GetAccess />
+          </div>
+
           <div className="px-4">
             <Social />
           </div>

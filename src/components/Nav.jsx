@@ -10,10 +10,10 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-transparent md:pt-5 ">
+    <nav className="bg-transparent md:pt-9 ">
       <div className=" mx-auto ">
         <div className="flex justify-between items-center">
-          <div className="flex space-x-20 h-16 items-center">
+          {/* <div className="flex space-x-20 h-16 items-center"> */}
             <div>
               {/* <!-- Website Logo --> */}
               <a href="#" className="">
@@ -25,32 +25,23 @@ const Nav = () => {
               <a href="" className="py-4 px-2 text-orange  font-semibold ">
                 Home
               </a>
+
               <a
                 href=""
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-orange transition duration-300"
               >
-                Team
-              </a>
-              <a
-                href=""
-                className="py-4 px-2 text-gray-500 font-semibold hover:text-orange transition duration-300"
-              >
-                Faq
-              </a>
-              <a
-                href=""
-                className="py-4 px-2 text-gray-500 font-semibold hover:text-orange transition duration-300"
-              >
-                Contact
+                Contact us
               </a>
             </div>
-          </div>
+          {/* </div> */}
+
           {/* <!-- Secondary Navbar items --> */}
           <div className="hidden md:flex items-center space-x-3 ">
             <a href="" className="btn bg-primary text-yellow btn_shadow ">
-              Join our waitlist
+              Join the club
             </a>
           </div>
+
           {/* <!-- Mobile menu button --> */}
           <div className="md:hidden flex items-center">
             <FaBars className="cursor-pointer" onClick={handleNAv} />

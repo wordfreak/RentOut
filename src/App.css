@@ -16,20 +16,21 @@ button {
 body {
   font-family: Nunito, sans;
   margin: 0 auto;
+  /* max-width: 1520px; */
   /*  */
 }
 .content {
-  max-width: 1048px;
+  max-width: 1106px;
   margin: 0 auto;
 }
 
 .page_body {
-  background-image: url(./assets/img/bigCircle.png);
+  background-image: url(./assets/img/headerBg.png);
   background-repeat: no-repeat;
-  /* background-size: 40%; */
+  background-size: 300px;
   background-position-x: right;
-
-  max-width: 1440px;
+  overflow-y: hidden;
+  max-width: 1520px;
   margin: 0 auto;
 }
 
@@ -67,21 +68,59 @@ body {
   min-height: 500px;
 }
 .access {
-  background: #1d3c58;
-
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border: 3px solid #1d3c58;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.1));
+  border-radius: 34px;
 }
 .social h1 {
   max-width: 429px;
 }
+.spot {
+  width: 253.22px;
+  height: 66px;
+  /* left: calc(50% - 253.22px / 2 + 458.11px);
+  top: calc(50% - 66px / 2 - 1014px); */
+
+  /* Rentout/Rentout Yellow */
+
+  background: #fdb839;
+  border-radius: 20px;
+}
+
+.rentOut {
+  max-width: 500px;
+  letter-spacing: 0.2px;
+}
+
+.formGroup label {
+  @apply block mb-4 md:text-2xl pl-7;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+}
+.formGroup input {
+  @apply px-7 py-4 w-full text-2xl focus:outline-none;
+
+  background: linear-gradient(
+    72.77deg,
+    #edeef6 11.72%,
+    rgba(237, 238, 246, 0) 98.52%
+  );
+  border-radius: 50px;
+  max-width: 544.61px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  
+}
+
+form button{
+  @apply py-5 ;
+  border-radius: 50px;
+}
 
 @media screen and (max-width: 768px) {
   .page_body {
-    background-image: url(./assets/img/halfCircle.png);
-    background-size: 240px;
-    background-position: right 540px;
-    max-width: 100%;
+    background-image: none;
   }
   .bigMan {
     min-height: 550px;

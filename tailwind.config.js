@@ -12,7 +12,15 @@ module.exports = {
       fontSize: {
         "1xl": "2.50rem",
       },
+
+      letterSpacing: {
+        tighter: "0.2px",
+      },
     },
   },
   plugins: [],
+
+  variants: {
+    appearance: ["responsive", "hover", "focus"],
+  },
 };

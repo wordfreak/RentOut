@@ -1,14 +1,16 @@
 import React from "react";
-import Screen from "../assets/img/phone.png";
+import inventory from "../assets/img/inventory.png";
 
 const Account = () => {
   return (
-    <div className="mt-20">
+    <div className="md:mt-44">
       <div className=" flex md:flex-row flex-col-reverse ">
-        <div className="w-full md:w-1/2">
-          {/* <img src="" alt="" /> */}
-          <img src={Screen} alt="srceens" className="block  mx-auto" />
-          {/* <img src="" alt="" /> */}
+        <div className="wfull md:w-1/2 relative">
+          <img src={inventory} alt="srceens" className="block  mx-auto" />
+          <div className="w-16 h-16 bg-orange rounded-full absolute -top-20 -z-10 right-20 "></div>
+
+          <div className="w-16 h-16 bg-primary rounded-full absolute bottom-20 -z-10 right-28 "></div>
+          <div className="w-16 h-16 bg-yellow rounded-full absolute top-28 -z-10 left-28 "></div>
         </div>
 
         {/* second row   */}
@@ -28,15 +30,7 @@ const Account = () => {
           </div>
         </div>
       </div>
-      <div className="hidden md:block font-bold text-center md:text-4xl">
-        Join our waitlist and stay in the loop{" "}
-        <button
-          aria-label="book spot"
-          className=" text-2xl font-bold px-4 py-2 rounded-xl bg-yellow"
-        >
-          Book your spot
-        </button>{" "}
-      </div>
+     
     </div>
   );
 };

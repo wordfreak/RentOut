@@ -1,5 +1,5 @@
 import React from "react";
-import Man from "../assets/img/Man.png";
+import social from "../assets/img/social.png";
 const Social = () => {
   return (
     <div className="mt-16">
@@ -10,7 +10,7 @@ const Social = () => {
           </h1>
         </div>
         <div className="flex items-center justify-center w-full md:w-1/2">
-          <img src={Man} alt="Social Image " />
+          <img src={social} alt="Social Image " />
         </div>
       </div>
     </div>
