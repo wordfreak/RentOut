@@ -55,7 +55,7 @@ body {
     rgba(237, 238, 246, 0) 98.52%
   );
   border-radius: 50px;
-  min-height: 500px;
+  border-radius: 50px;
 }
 
 .offer {
@@ -110,12 +110,24 @@ body {
   max-width: 544.61px;
   line-height: 38px;
   letter-spacing: 0.2px;
-  
 }
 
-form button{
-  @apply py-5 ;
+form button {
+  @apply py-5;
   border-radius: 50px;
+}
+
+.social_icons {
+  @apply text-2xl;
+  color: #ff6e41;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.678);
+}
+.modal-box {
+  @apply bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  max-width: 400px;
 }
 
 @media screen and (max-width: 768px) {

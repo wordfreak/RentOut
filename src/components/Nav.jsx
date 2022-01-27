@@ -10,7 +10,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-transparent md:pt-9 ">
+    <nav className="bg-transparent md:pt-9 pt-9 ">
       <div className=" mx-auto ">
         <div className="flex justify-between items-center">
           {/* <div className="flex space-x-20 h-16 items-center"> */}

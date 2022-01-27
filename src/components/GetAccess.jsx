@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { IoCheckmarkCircleOutline } from "react-icons/io5";
 const GetAccess = () => {
   const initialData = {
     name: "",
@@ -9,21 +9,53 @@ const GetAccess = () => {
   };
 
   const [client, setClient] = useState(initialData);
+  const [nameErr, setNameErr] = useState(false);
+  const [emailErr, setEmailErr] = useState(false);
+  const [modal, setModal] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setClient({ ...client, [name]: value });
   };
+  const { name, email, number, medium } = client;
+
+  const handleModal = () => {
+    setModal(false);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (client.name === "" || client.email == "") {
+      // console.log(name.length);
+      // console.log(email.length);
+      name.length === 0 ? setNameErr(true) : setNameErr(false);
+      email.length === 0 ? setEmailErr(true) : setEmailErr(false);
     } else {
-      console.log(client);
+      fetch(
+        "https://sheet.best/api/sheets/4e64ad38-2195-46b8-9fac-6ed5e98088a1",
+        {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(client),
+        }
+      )
+        .then((r) => r.json())
+        .then((res) => {
+          // The response comes here
+          // console.log(res);
+          res ? setModal(true) : console.log("unable to upload");
+        })
+        .catch((error) => {
+          // Errors are reported there
+          console.log(error);
+        });
+
+      // console.log(client);
     }
   };
-
-  const { name, email, number, medium } = client;
 
   return (
     <div className="mt-56 ">
@@ -48,6 +80,9 @@ const GetAccess = () => {
                   value={name}
                   onChange={handleChange}
                 />
+                {nameErr ? (
+                  <p className="text-red-600 pl-7 ">Field is Required</p>
+                ) : null}
               </div>
             </div>
             {/* second column  */}
@@ -61,6 +96,10 @@ const GetAccess = () => {
                   onChange={handleChange}
                   value={email}
                 />
+
+                {emailErr ? (
+                  <p className="text-red-600 pl-7 ">Field is Required</p>
+                ) : null}
               </div>
             </div>
           </div>
@@ -71,12 +110,12 @@ const GetAccess = () => {
             {/* first column */}
             <div className="w-full md:w-1/2">
               <div className="formGroup">
-                <label htmlFor="fullName">Phone Number</label>
+                <label htmlFor="number">Phone Number</label>
                 <input
                   type="text"
                   name="number"
                   placeholder="+234"
-                  name={number}
+                  value={number}
                   onChange={handleChange}
                 />
               </div>
@@ -99,7 +138,7 @@ const GetAccess = () => {
           <div className="text-center">
             <button
               onClick={handleSubmit}
-              className="bg-orange text-white text-2xl  w-60 mt-28 "
+              className="bg-orange text-white text-2xl w-60 mt-28 "
             >
               Let’s do this
             </button>
@@ -109,28 +148,36 @@ const GetAccess = () => {
 
       {/* Done Modal box  */}
 
-      {/* unsuccessful modal  */}
-
-      {/* <div
-        className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
-        role="alert"
+      <div
+        className={`fixed top-0 bottom-0 left-0  modal w-full bg-dim z-50 h-screen ${
+          modal ? "" : "hidden"
+        }  `}
       >
-        <strong className="font-bold">Holy smokes!</strong>
-        <span className="block sm:inline">
-          Something seriously bad happened.
-        </span>
-        <span className="absolute top-0 bottom-0 right-0 px-4 py-3">
-          <svg
-            className="fill-current h-6 w-6 text-red-500"
-            role="button"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <title>Close</title>
-            <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
-          </svg>
-        </span>
-      </div> */}
+        <div className="modal-box w-11/12 p-8 transition-all ease-out duration-700 ">
+          <div className="modal_content">
+            <div className=" text-9xl  flex justify-center">
+              <IoCheckmarkCircleOutline />
+            </div>
+
+            <h1 className="text-xl font-bold text-orange text-center">
+              Thanks for joining us.
+            </h1>
+
+            <div className="text-center ">
+              <button
+                onClick={handleModal}
+                type="reset"
+                className="bg-primary text-orange py-2 mt-4 px-8 rounded-lg"
+              >
+                {" "}
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* unsuccessful modal  */}
     </div>
   );
 };

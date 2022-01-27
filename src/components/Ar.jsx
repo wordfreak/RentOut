@@ -4,7 +4,7 @@ import Ship from "../assets/img/ship.png";
 const Ar = () => {
   return (
     <div className="mt-56 relative">
-      <div className=" flex flex-wrap">
+      <div className="ar md:py-12 rounded-3xl flex flex-wrap">
         <div className="w-full md:w-1/2 relative flex items-center justify-center md:px-12 text-center md:text-left">
           <div>
             <h1 className="font-bold text-1xl md:text-6xl">

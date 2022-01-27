@@ -11,6 +11,8 @@ import Offers from "./components/Offers";
 import Social from "./components/Social";
 import Club from "./components/Club";
 import GetAccess from "./components/GetAccess";
+import Partners from "./components/Partners";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -54,8 +56,15 @@ const App = () => {
           </div>
 
           <div className="px-4">
+            <Partners />
+          </div>
+
+          <div className="px-4">
             <Social />
           </div>
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     </div>
