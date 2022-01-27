@@ -5,7 +5,7 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
-import Logo from "../assets/img/footerLogo.png";
+import Logo from "../assets/img/AppLogo.png";
 
 const Footer = () => {
   return (
