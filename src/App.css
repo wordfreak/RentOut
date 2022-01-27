@@ -126,7 +126,7 @@ form button {
   background-color: rgba(0, 0, 0, 0.678);
 }
 .modal-box {
-  @apply bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  @apply bg-white absolute rounded-md top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
   max-width: 400px;
 }
 
