@@ -94,7 +94,7 @@ body {
 }
 
 .formGroup label {
-  @apply block mb-4 md:text-2xl pl-7;
+  @apply block mb-2 md:text-2xl pl-7;
   line-height: 38px;
   letter-spacing: 0.2px;
 }
@@ -128,6 +128,36 @@ form button {
 .modal-box {
   @apply bg-white absolute rounded-md top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
   max-width: 400px;
+}
+
+.active {
+  @apply text-orange;
+}
+
+.que {
+  @apply text-2xl leading-9;
+}
+.review {
+  @apply py-4 my-4 text-2xl px-8;
+  resize: none;
+  outline: none;
+  min-height: 148px;
+  width: 100%;
+  max-width: 545px;
+  background: linear-gradient(
+    72.77deg,
+    #edeef6 11.72%,
+    rgba(237, 238, 246, 0) 98.52%
+  );
+  border-radius: 33px;
+}
+.pollButton {
+  @apply rounded-2xl text-lg font-bold px-9 py-4;
+  border: 1px solid;
+}
+.progress {
+  min-height: 6px;
+  max-height: 6px;
 }
 
 @media screen and (max-width: 768px) {

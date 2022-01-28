@@ -11,7 +11,7 @@ const Partners = () => {
         Our Partners
       </h1>
       <div className="mt-8">
-        <div className="flex max-w-4xl justify-between mx-auto">
+        <div className="flex max-w-4xl justify-between flex-wrap mx-auto">
           <img src={partner1} alt="First Partner" />
           <img src={partner2} alt="First Partner" />
           <img src={partner3} alt="First Partner" />

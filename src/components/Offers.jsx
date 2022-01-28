@@ -3,7 +3,7 @@ import offer from "../assets/img/offer.png";
 
 const Offers = () => {
   return (
-    <div className="mt-56 ">
+    <div className=" mt-16 md:mt-56 ">
       <div className=" flex flex-col md:flex-row  relative  px-4 ">
         <div className="w-full md:w-1/2 flex items-center justify-center md:px-12 text-center md:text-left">
           <div className="font-bold text-1xl leading-10 tracking-normal md:tracking-wide text-primary pt-12 ">
@@ -17,7 +17,7 @@ const Offers = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2  ">
+        <div className="w-full md:w-1/2 mt-8 md:mt-0  ">
           <img src={offer} alt="Mobile hand pic" className="" />
 
         </div>

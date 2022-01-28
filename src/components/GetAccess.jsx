@@ -58,14 +58,14 @@ const GetAccess = () => {
   };
 
   return (
-    <div className="mt-56 ">
-      <h1 className=" md:text-4xl leading-10 -tracking-wide text-primary text-center font-bold">
+    <div className=" mt-16 md:mt-56 ">
+      <h1 className=" md:text-4xl text-3xl leading-10 -tracking-wide text-primary text-center font-bold">
         Take the first step to{" "}
         <span className="text-orange ">living your best life!</span>
       </h1>
 
       {/* Form code  */}
-      <div className="mt-20">
+      <div className="mt-12">
         <form>
           {/* first row */}
           <div className="flex flex-col md:flex-row justify-between ">
@@ -86,7 +86,7 @@ const GetAccess = () => {
               </div>
             </div>
             {/* second column  */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2  mt-10 md:mt-0">
               <div className="formGroup">
                 <label htmlFor="email">Email</label>
                 <input
@@ -121,7 +121,7 @@ const GetAccess = () => {
               </div>
             </div>
             {/* second column  */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 mt-10 md:mt-0">
               <div className="formGroup">
                 <label htmlFor="medium">How did you get the gist?</label>
                 <input

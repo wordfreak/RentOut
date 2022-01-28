@@ -3,7 +3,7 @@ import Ship from "../assets/img/ship.png";
 
 const Ar = () => {
   return (
-    <div className="mt-56 relative">
+    <div className=" mt-16 md:mt-56 relative">
       <div className="ar md:py-12 rounded-3xl flex flex-wrap">
         <div className="w-full md:w-1/2 relative flex items-center justify-center md:px-12 text-center md:text-left">
           <div>
@@ -18,7 +18,7 @@ const Ar = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex items-center justify-center relative ">
+        <div className="w-full md:w-1/2 md:mt-0 mt-8 flex items-center justify-center relative ">
           <img src={Ship} alt="Mobile pic" className="md:absolute block z-50" />
         </div>
       </div>

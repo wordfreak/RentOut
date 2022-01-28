@@ -6,8 +6,8 @@ import { FaBars, FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-i
 const Social = () => {
   return (
     <div className="mt-16">
-      <div className="flex flex-col md:flex-row social ">
-        <div className="flex items-center justify-center w-full md:w-1/2">
+      <div className="flex flex-col md:flex-row social gap-10 md:gap-0 ">
+        <div className="flex items-center  justify-center w-full text-center md:w-1/2">
           <img src={social} alt="Social Image" className="w-9/12" />
         </div>
 
