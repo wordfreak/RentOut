@@ -21,7 +21,7 @@ const Header = () => {
             <p className="text-center md:text-left">
               <a
                 href="#"
-                className="btn bg-orange text-white mx-auto md:mx-0  inline-block mt-5 btn_shadow"
+                className=" hidden btn bg-orange text-white mx-auto md:mx-0  md:inline-block mt-5 btn_shadow"
               >
                 Get access Now!
               </a>
@@ -29,7 +29,7 @@ const Header = () => {
             <div className="w-24 h-24 hidden md:inline-block bg-yellow rounded-full absolute -bottom-4 right-28"></div>
           </div>
         </div>
-        <div className="w-full md:w-1/2 mt-16 md:mt-0 relative  bigMan overflow-hidden md:overflow-visible ">
+        <div className="w-full md:w-1/2 mt-16 md:mt-0 relative   overflow-hidden md:overflow-visible ">
           <div className="">
             <div className="absolute -top-56 right-60  md:-top-24 md:left-5 bg-orange w-12 h-12 rounded-full"></div>
 
