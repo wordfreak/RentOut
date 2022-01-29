@@ -23,7 +23,7 @@ const Club = () => {
             <div className="pt-4 text-center md:text-right text-3xl  md:text-1xl font-bold leading-10">
               500+ Club members <br /> and counting
             </div>
-            <div className=" text-2xl md:text-2xl leading-9 pt-5 text-center md:text-right text-text ">
+            <div className=" text-xl md:text-2xl leading-9 pt-5 text-center md:text-right text-text ">
               stay in the loop and get a front row seat{" "}
               <br className="hidden md:block" /> with exclusive offers when we
               launch

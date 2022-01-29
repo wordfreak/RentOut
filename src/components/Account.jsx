@@ -22,7 +22,7 @@ const Account = () => {
             <div className="pt-4 text-center md:text-left text-3xl md:text-1xl font-bold leading-10">
               Everyday Items, by <br /> the hour.
             </div>
-            <div className=" text-lg md:text-2xl leading-9 pt-5 text-center md:text-left text-text ">
+            <div className="text-xl md:text-2xl leading-9 pt-5 text-center md:text-left text-text ">
               Rentout offers an easy way to bring in extra cash by renting out
               the things you don't use! We'll handle all the requests and
               negotiate payments on your behalf.
@@ -30,7 +30,6 @@ const Account = () => {
           </div>
         </div>
       </div>
-     
     </div>
   );
 };

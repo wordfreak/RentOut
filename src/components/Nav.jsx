@@ -28,14 +28,14 @@ const Nav = () => {
             <NavLink
               to="/"
               className="py-4 px-2  font-semibold "
-              activeClassName="active"
+              // activeClassName="active"
             >
               Home
             </NavLink>
 
             <NavLink
               to="/contact"
-              activeClassName="active"
+              // activeClassName="active"
               className="py-4 px-2 text-gray-500 font-semibold hover:text-orange transition duration-300"
             >
               Contact us

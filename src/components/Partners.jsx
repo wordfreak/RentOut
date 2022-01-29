@@ -7,6 +7,7 @@ import partner4 from "../assets/img/p4.svg";
 const Partners = () => {
   return (
     <div className="mt-20">
+      <div className=" hidden md:block w-14 h-14 bg-primary rounded-full absolute left-0 "></div>
       <h1 className="text-5xl font-bold text-primary text-center">
         Our Partners
       </h1>

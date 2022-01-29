@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaTimes, FaTimesCircle } from "react-icons/fa";
 import book from "../assets/img/book.svg";
+import Done from "../assets/img/done.svg";
+import { useNavigate } from "react-router-dom";
 
 const MoreInfo = () => {
-  const details = {
-    review: "",
+  const navigate = useNavigate();
+  const [review, setReview] = useState("");
+  const [submited, setSubmited] = useState(false);
+
+  const handleChange = (e) => {
+    setReview(e.target.value);
+  };
+
+  const submittion = () => {
+    setSubmited(!submited);
+    // setTimeout(navigate("/"), 4000);
+    // submited ? setTimeout(navigate("/"), 4000) : null;
   };
 
   return (
@@ -22,6 +35,8 @@ const MoreInfo = () => {
                 name="review"
                 className="review"
                 placeholder="we’d love to hear more from you.."
+                onChange={handleChange}
+                value={review}
               ></textarea>
             </div>
 
@@ -56,7 +71,10 @@ const MoreInfo = () => {
               </div>
             </div>
             <div>
-              <button className="mt-10 px-5 py-3 bg-yellow text-primary text-xl rounded-3xl">
+              <button
+                className="mt-10 px-5 py-3 bg-yellow text-primary text-xl rounded-3xl"
+                onClick={submittion}
+              >
                 Get access
               </button>
             </div>
@@ -69,6 +87,30 @@ const MoreInfo = () => {
               alt="Book Ilustration"
               className=" w-full md:w-3/4"
             />
+          </div>
+        </div>
+
+        {/* MODAL CODE  */}
+
+        <div
+          className={` ${
+            submited ? "block" : "hidden"
+          }  fixed top-0 bottom-0 left-0 w-full modal`}
+          onClick={submittion}
+        >
+          <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-4/12 bg-white rounded-3xl p-4 md:px-9 md:py-12 ">
+            <div className="text-right">
+              <FaTimes
+                className="inline text-dim cursor-pointer "
+                onClick={submittion}
+              />
+            </div>
+            <img src={Done} alt="" className="block mx-auto" />
+
+            <div className="text-center md:text-xl font-bold mt-4 md:mt-8">
+              <span className="text-orange"> Correct guy!</span> welcome to the
+              club{" "}
+            </div>
           </div>
         </div>
       </div>

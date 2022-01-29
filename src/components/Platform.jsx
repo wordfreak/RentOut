@@ -3,11 +3,11 @@ import insurance from "../assets/img/insurance.png";
 
 const Platform = () => {
   return (
-    <div className=" mt-16 md:mt-44">
+    <div className=" mt-16 md:mt-44 relative ">
+      {/* <div className="w-44 h-44 -right-80 bg-orange rounded-full absolute top-0 -z-10  "></div> */}
       <div className="flex flex-col-reverse md:flex-row-reverse  ">
         <div className="wfull md:w-1/2 relative">
           <img src={insurance} alt="srceens" className="block  mx-auto" />
-          {/* <div className="w-16 h-16 bg-orange rounded-full absolute -top-20 -z-10 right-20 "></div> */}
         </div>
 
         {/* second row   */}
@@ -17,9 +17,10 @@ const Platform = () => {
               Original platform
             </h1>
             <div className="pt-4 text-center md:text-left text-3xl md:text-1xl font-bold leading-10">
-              Insure your items <br className="hidden md:block" /> and Be at peace
+              Insure your items <br className="hidden md:block" /> and Be at
+              peace
             </div>
-            <div className="rentOut text-lg md:text-2xl leading-9 pt-5 text-center md:text-left text-text tracking-wide ">
+            <div className="rentOut text-xl md:text-2xl leading-9 pt-5 text-center md:text-left text-text tracking-wide ">
               Rentout offers security and insurance of up to $500 on every item
               you rent out. This allows you to rent and rent out your items with
               peace of mind
