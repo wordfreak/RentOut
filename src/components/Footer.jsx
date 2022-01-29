@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mx-auto md:mx-0 mt-5 ">
-          <div className="social_icons flex md:justify-end gap-7">
+          <div className="social_icons flex justify-center md:justify-end gap-7">
             <a href="#">
               <FaInstagram />
             </a>

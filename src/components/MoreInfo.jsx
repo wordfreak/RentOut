@@ -16,12 +16,12 @@ const MoreInfo = () => {
   const submittion = () => {
     setSubmited(!submited);
     // setTimeout(navigate("/"), 4000);
-    submited ? setTimeout(navigate("/"), 4000) : null;
+    submited ? () => setTimeout(navigate("/"), 1) : null;
   };
 
   return (
-    <div>
-      <h1 className="font-bold mt-14 text-primary md:text-4xl">
+    <div className="py-10">
+      <h1 className=" text-center md:text-left text-2xl font-bold mt-14 text-primary md:text-4xl">
         A little bit of more info &{" "}
         <span className="text-yellow ">you’re in!</span>
       </h1>
@@ -48,7 +48,7 @@ const MoreInfo = () => {
                 <button className="pollButton text-primary border-primary">
                   Renting Items
                 </button>
-                <button className="pollButton text-orange ">
+                <button className="pollButton mt-8 md:mt-0 text-orange ">
                   Renting out my Items
                 </button>
               </div>
@@ -61,7 +61,7 @@ const MoreInfo = () => {
                     style={{ width: "100%" }}
                   ></span>
                 </div>
-                <div className=" gap-8 flex items-center  text-orange">
+                <div className=" gap-8 flex items-center   text-orange">
                   <div className=" text-lg">Renting out my Items</div>
                   <span
                     className="progress inline-block rounded-lg bg-orange"
