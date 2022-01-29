@@ -16,7 +16,7 @@ const MoreInfo = () => {
   const submittion = () => {
     setSubmited(!submited);
     // setTimeout(navigate("/"), 4000);
-    // submited ? setTimeout(navigate("/"), 4000) : null;
+    submited ? setTimeout(navigate("/"), 4000) : null;
   };
 
   return (
