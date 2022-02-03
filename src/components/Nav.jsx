@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/img/AppLogo.png";
 
 const Nav = () => {
@@ -17,26 +17,16 @@ const Nav = () => {
           {/* <div className="flex space-x-20 h-16 items-center"> */}
           <div>
             {/* <!-- Website Logo --> */}
-            <a href="#" className="">
+            <Link to="/" className="">
               <img src={Logo} alt="Logo" className=" mr-2" />
-            </a>
+            </Link>
           </div>
           {/* <!-- Primary Navbar items --> */}
           <div className=" md:flex items-center md:gap-8">
-            <a href=""></a>
-
-            <NavLink
-              to="/"
-              className="py-4 px-2  font-semibold "
-              // activeClassName="active"
-            >
-              Home
-            </NavLink>
-
             <NavLink
               to="/contact"
               // activeClassName="active"
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-orange transition duration-300"
+              className="py-3 inline-block w-24 md:w-48 px-2 bg-primary text-orange font-semibold md:font-bold md:text-2xl text-center rounded-xl hover:text-orange transition duration-300"
             >
               Contact us
             </NavLink>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Camera from "../assets/img/camera.png";
 const Header = () => {
   return (
@@ -19,12 +20,13 @@ const Header = () => {
               cars down to shortlet homes we have it! just for you
             </p>
             <p className="text-center md:text-left">
-              <a
+              <Link
+                to="/contact"
                 href="#"
                 className=" hidden btn bg-orange text-white mx-auto md:mx-0  md:inline-block mt-5 btn_shadow"
               >
                 Get access Now!
-              </a>
+              </Link>
             </p>
             <div className="w-24 h-24 hidden md:inline-block bg-yellow rounded-full absolute -bottom-4 right-28"></div>
           </div>

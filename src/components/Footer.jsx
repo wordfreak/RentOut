@@ -18,25 +18,25 @@ const Footer = () => {
           </div>
         </div>
         <div className="mx-auto md:mx-0 mt-5 ">
-          <div className="social_icons flex justify-center md:justify-end gap-7">
-            <a href="#">
+          <div className="social_icons flex justify-center md:justify-end ">
+            <a href="#" className="footer_link">
               <FaInstagram />
             </a>
 
-            <a href="#">
+            <a href="#" className="footer_link">
               <FaTwitter />
             </a>
 
-            <a href="#">
+            <a href="#" className="footer_link">
               <FaFacebookF />
             </a>
 
-            <a href="#">
+            <a href="#" className="footer_link">
               <FaLinkedin />
             </a>
           </div>
           <div>
-            Copyright 2021{" "}
+            Copyright 2021
             <a href="#" className="inline-block mt-4 text-primary">
               rentout.app
             </a>

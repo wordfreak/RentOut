@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import offer from "../assets/img/offer.png";
 
 const Offers = () => {
@@ -10,17 +11,18 @@ const Offers = () => {
             Save time & money with exclusive offers from top renters{" "}
             <span className="hidden md:inline">when we launch</span>
             <p>
-              <button className="access hidden md:block text-xl mt-4 text-orange py-4 px-8 w-72 ">
-                Get Access Now!
-              </button>
+              <Link to="/contact">
+                <button className="access hidden md:block text-xl mt-4 text-orange py-4 px-8 w-72 ">
+                  Get Access Now!
+                </button>
+              </Link>
             </p>
           </div>
         </div>
 
         <div className="w-full md:w-1/2 mt-8 md:mt-0  ">
           <img src={offer} alt="Mobile hand pic" className="" />
-
-        </div>
+        </div>  
       </div>
     </div>
   );

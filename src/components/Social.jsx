@@ -16,20 +16,20 @@ const Social = () => {
             <h1 className="font-bold text-center  text-1xl leading-10 tracking-normal  md:tracking-wide">
               Hey! Follow us on social media so you don’t miss any offer.
             </h1>
-            <div className="flex justify-center items-center gap-8 pt-8 social_icons">
-              <a href="#">
+            <div className="flex justify-center items-center   pt-8 social_icons">
+              <a href="#" className="footer_link" >
                 <FaInstagram />
               </a>
 
-              <a href="#">
+              <a href="#" className="footer_link" >
                 <FaTwitter />
               </a>
 
-              <a href="#">
+              <a href="#" className="footer_link" >
                 <FaFacebookF />
               </a>
 
-              <a href="#">
+              <a href="#" className="footer_link" >
                 <FaLinkedin />
               </a>
             </div>

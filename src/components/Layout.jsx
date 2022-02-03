@@ -1,10 +1,9 @@
 import React from "react";
-import Nav from "../components/Nav";
 import smallBox from "../assets/img/smallCircle.png";
-import MoreInfo from "../components/MoreInfo";
-import Footer from "../components/Footer";
+import Footer from "./Footer";
+import Nav from "./Nav";
 
-const Contact = () => {
+const Layout = ({ children }) => {
   return (
     <div className="relative page_body min-h-screen ">
       {/* small boxx div  */}
@@ -20,14 +19,12 @@ const Contact = () => {
           <div className="px-4">
             <Nav />
           </div>
-          <div className="px-4">
-            <MoreInfo />
-          </div>
         </div>
+        <div className="">{children}</div>
       </div>
-      <Footer />
+    
     </div>
   );
 };
 
-export default Contact;
+export default Layout;

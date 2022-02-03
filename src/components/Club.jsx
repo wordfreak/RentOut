@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import memeber from "../assets/img/memeber.png";
 
 const Club = () => {
@@ -29,9 +30,11 @@ const Club = () => {
               launch
             </div>
             <p className=" text-center md:text-right mt-5">
-              <button className="spot text-primary font-bold text-xl">
-                Book your spot
-              </button>
+              <Link to="/contact">
+                <button className="spot text-primary font-bold text-xl">
+                  Book your spot
+                </button>
+              </Link>
             </p>
           </div>
         </div>

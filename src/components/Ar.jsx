@@ -2,15 +2,13 @@ import React from "react";
 import Ship from "../assets/img/ship.png";
 
 const Ar = () => {
-  
-
   return (
     <div className=" mt-16 md:mt-56 relative">
       <div className="ar md:py-12 rounded-3xl flex flex-wrap">
         <div className="w-full md:w-1/2 relative flex items-center justify-center md:px-12 text-center md:text-left">
           <div>
             <div className="hidden md:block w-14 h-14 bg-orange rounded-full absolute right-0 -top-16"></div>
-            <h1 className="font-bold text-1xl md:text-6xl">
+            <h1 className="font-bold text-3xl md:text-1xl md:text-6xl">
               Experience products in AR
             </h1>
 
