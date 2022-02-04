@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaCheck } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Form = ({ button }) => {
@@ -150,12 +151,13 @@ const Form = ({ button }) => {
                   </label>
                   <input
                     type="radio"
-                    className="hidden"
+                    className="hidden checkbox"
                     name="medium"
                     id="friend"
                     value="friend"
                     onChange={handleChange}
                   />
+                  <FaCheck className="icon" />
                 </div>
 
                 <div className="form-group">
@@ -167,12 +169,13 @@ const Form = ({ button }) => {
                   </label>
                   <input
                     type="radio"
-                    className="hidden"
+                    className="hidden checkbox"
                     name="medium"
                     id="SocialMedia"
                     value="social media"
                     onChange={handleChange}
                   />
+                  <FaCheck className="icon" />
                 </div>
 
                 <div className="form-group">
@@ -186,13 +189,13 @@ const Form = ({ button }) => {
                   </label>
                   <input
                     type="radio"
-                    className="hidden"
+                    className="hidden checkbox"
                     name="medium"
                     id="google"
                     value="Google"
                     onChange={handleChange}
-                    
                   />
+                  <FaCheck className="icon" />
                 </div>
 
                 <div className="form-group">
@@ -201,12 +204,13 @@ const Form = ({ button }) => {
                   </label>
                   <input
                     type="radio"
-                    className="hidden"
+                    className="hidden checkbox"
                     name="medium"
                     id="others"
                     value="Others"
                     onChange={handleChange}
                   />
+                  <FaCheck className="icon" />
                 </div>
               </div>
             </div>
