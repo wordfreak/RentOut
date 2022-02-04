@@ -1,5 +1,5 @@
 import React from "react";
-import inventory from "../assets/img/inventory.png";
+import inventory from "../assets/img/inventory.svg";
 
 const Account = () => {
   return (
@@ -7,10 +7,10 @@ const Account = () => {
       <div className=" flex md:flex-row flex-col-reverse ">
         <div className="w-full md:w-1/2 relative">
           <img src={inventory} alt="srceens" className="block  mx-auto" />
-          <div className="hidden md:inline-block w-16 h-16 bg-orange rounded-full absolute -top-20 -z-10 right-20 "></div>
+          {/* <div className="hidden md:inline-block w-16 h-16 bg-orange rounded-full absolute -top-10 -z-10 right-20 "></div>
 
           <div className=" hidden md:block w-16 h-16 bg-primary rounded-full absolute bottom-20 -z-10 right-28 "></div>
-          <div className=" hidden md:block w-16 h-16 bg-yellow rounded-full absolute top-28 -z-10 left-28 "></div>
+          <div className=" hidden md:block w-16 h-16 bg-yellow rounded-full absolute top-28 -z-10 left-28 "></div> */}
         </div>
 
         {/* second row   */}

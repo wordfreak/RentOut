@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import smallSticker from "../assets/img/SmallbgSticker.png";
 import smallSticker2 from "../assets/img/SmallbgSticker2.png";
 import Footer from "./Footer";
+import Poll from "./Poll";
 
 const MoreInfo = () => {
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ const MoreInfo = () => {
   const [nameErr, setNameErr] = useState(false);
   const [emailErr, setEmailErr] = useState(false);
   const [submited, setSubmited] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   // destructuring the client data
   const { name, email, number, medium, review } = client;
@@ -53,6 +55,7 @@ const MoreInfo = () => {
       name.length === 0 ? setNameErr(true) : setNameErr(false);
       email.length === 0 ? setEmailErr(true) : setEmailErr(false);
     } else {
+      setIsLoading(true);
       fetch(
         "https://sheet.best/api/sheets/4e64ad38-2195-46b8-9fac-6ed5e98088a1",
         {
@@ -67,12 +70,13 @@ const MoreInfo = () => {
         .then((r) => r.json())
         .then((res) => {
           // The response comes here
-          console.log(res);
+          // console.log(r);
           res ? setSubmited(!submited) : console.log("unable to upload");
+          setIsLoading(false);
         })
         .catch((error) => {
           // Errors are reported there
-          console.log(error);
+          console.log("gate way eror");
         });
 
       // console.log(client);
@@ -279,42 +283,7 @@ const MoreInfo = () => {
                 />
               </div>
 
-              <div className="mt-10">
-                <div className="que mt-4">
-                  Which of these are you most likely to do?
-                </div>
-                <div className="space-x-7  mt-5">
-                  <button
-                    type="button"
-                    className="pollButton text-primary border-primary"
-                  >
-                    Renting Items
-                  </button>
-                  <button
-                    type="button"
-                    className="pollButton mt-3 md:mt-0 text-orange "
-                  >
-                    Renting out my Items
-                  </button>
-                </div>
-              </div>
-
-              <div className=" mt-6 md:mt-10 flex items-end flex-col">
-                <div className="progress">
-                  <div className="progress_indicator">
-                    <div className="bg-primary" style={{ width: "90%" }}></div>
-                  </div>
-                  <div className="progress_title">Renting Items</div>
-                </div>
-
-                <div className="progress">
-                  <div className="progress_indicator">
-                    <div className="bg-orange" style={{ width: "40%" }}></div>
-                  </div>
-                  <div className="progress_title">Renting out my Items</div>
-                </div>
-              </div>
-
+              <Poll />
               <div>
                 <button className="mt-10 px-5 py-3 bg-yellow text-primary text-xl rounded-3xl">
                   Get access
@@ -323,7 +292,31 @@ const MoreInfo = () => {
             </div>
           </div>
 
-          {/* MODAL CODE  */}
+          {/* SUCCESS MODAL CODE  */}
+
+          <div
+            className={` ${
+              submited ? "block" : "hidden"
+            }  fixed top-0 bottom-0 left-0 w-full modal`}
+            onClick={submittion}
+          >
+            <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-4/12 bg-white rounded-3xl p-4 md:px-9 md:py-12 ">
+              <div className="text-right">
+                <FaTimes
+                  className="inline text-dim cursor-pointer "
+                  onClick={submittion}
+                />
+              </div>
+              <img src={Done} alt="" className="block mx-auto" />
+
+              <div className="text-center md:text-xl font-bold mt-4 md:mt-8">
+                <span className="text-orange"> Correct guy!</span> welcome to
+                the club
+              </div>
+            </div>
+          </div>
+
+          {/* SUCCESS MODAL CODE  */}
 
           <div
             className={` ${
