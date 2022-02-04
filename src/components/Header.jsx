@@ -23,7 +23,7 @@ const Header = () => {
               <Link
                 to="/contact"
                 href="#"
-                className=" hidden btn bg-orange text-white mx-auto md:mx-0  md:inline-block mt-5 btn_shadow"
+                className=" hidden btn bg-orange text-white mx-auto md:mx-0  md:flex mt-5 btn_shadow"
               >
                 Get access Now!
               </Link>

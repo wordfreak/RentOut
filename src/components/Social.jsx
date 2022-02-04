@@ -1,7 +1,13 @@
 import React from "react";
-import social from "../assets/img/social.png";
+import social from "../assets/img/social.svg";
 import chair from "../assets/img/chair.svg";
-import { FaBars, FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  FaBars,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Social = () => {
   return (
@@ -17,19 +23,19 @@ const Social = () => {
               Hey! Follow us on social media so you don’t miss any offer.
             </h1>
             <div className="flex justify-center items-center   pt-8 social_icons">
-              <a href="#" className="footer_link" >
+              <a href="#" className="footer_link">
                 <FaInstagram />
               </a>
 
-              <a href="#" className="footer_link" >
+              <a href="#" className="footer_link">
                 <FaTwitter />
               </a>
 
-              <a href="#" className="footer_link" >
+              <a href="#" className="footer_link">
                 <FaFacebookF />
               </a>
 
-              <a href="#" className="footer_link" >
+              <a href="#" className="footer_link">
                 <FaLinkedin />
               </a>
             </div>

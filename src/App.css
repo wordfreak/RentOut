@@ -19,6 +19,7 @@ body {
   /* max-width: 1520px; */
   /*  */
 }
+
 .content {
   max-width: 1106px;
   margin: 0 auto;
@@ -32,6 +33,16 @@ body {
   overflow-y: hidden;
   max-width: 1520px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1266px) {
+  .page_body {
+    background-size: 150px;
+  }
+
+  .imgBg {
+    @apply -left-10 -top-7;
+  }
 }
 
 .imgBg {
@@ -92,13 +103,13 @@ body {
   max-width: 500px;
   letter-spacing: 0.2px;
 }
-.formGroup{
-  @apply mr-20 ;
+.formGroup {
+  @apply mr-14;
 }
 
- .form-group{
-   /* @apply mr- */
- }
+.form-group {
+  /* @apply mr- */
+}
 
 .formGroup label {
   @apply block md:pb-2 text-xl md:text-2xl pl-7;
@@ -162,10 +173,29 @@ form button {
   @apply rounded-2xl md:text-lg font-bold px-4 md:py-4 py-2;
   border: 1px solid;
 }
+
 .progress {
-  min-height: 6px;
-  max-height: 6px;
+  @apply w-full flex md:my-0 my-2 flex-col-reverse md:flex-row;
+  max-width: 394px;
 }
+.progress_title {
+  @apply w-full  md:w-5/12 ;
+}
+
+.progress_indicator {
+  @apply flex-grow;
+}
+.progress_indicator {
+  @apply flex justify-end items-center flex-grow;
+}
+.progress_indicator div {
+  /* @apply  ; */
+  max-height: 6px;
+  height: 6px;
+  border-radius: 10px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
 .footer_link {
   @apply inline-block mx-4;
 }
@@ -182,7 +212,7 @@ form button {
   border-radius: 33px;
 }
 .gist {
-  @apply flex gap-6 flex-wrap;
+  @apply flex gap-6 flex-wrap mt-4;
 }
 .gist label {
   @apply text-base m-0 px-4 py-2 cursor-pointer text-center border rounded-full font-bold;
@@ -194,7 +224,7 @@ form button {
 
   background-image: url(./assets/img/bgsticker.svg);
   background-repeat: no-repeat;
-  background-position-y:bottom;
+  background-position-y: bottom;
 }
 
 @media screen and (max-width: 768px) {
@@ -215,5 +245,11 @@ form button {
     height: auto;
     border-radius: 0;
     min-height: auto;
+  }
+
+  .formSticker {
+    /* @apply; */
+
+    background-image: none;
   }
 }

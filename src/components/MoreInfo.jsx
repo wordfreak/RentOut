@@ -53,9 +53,30 @@ const MoreInfo = () => {
       name.length === 0 ? setNameErr(true) : setNameErr(false);
       email.length === 0 ? setEmailErr(true) : setEmailErr(false);
     } else {
-      console.log(client);
+      fetch(
+        "https://sheet.best/api/sheets/4e64ad38-2195-46b8-9fac-6ed5e98088a1",
+        {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(client),
+        }
+      )
+        .then((r) => r.json())
+        .then((res) => {
+          // The response comes here
+          // console.log(res);
+          res ? setSubmited(!submited) : console.log("unable to upload");
+        })
+        .catch((error) => {
+          // Errors are reported there
+          console.log(error);
+        });
+
+      // console.log(client);
       window.localStorage.removeItem("client");
-      setSubmited(!submited);
     }
   };
 
@@ -228,7 +249,7 @@ const MoreInfo = () => {
             <img
               src={book}
               alt="Book Ilustration"
-              className=" w-full md:w-3/4"
+              className=" w-full md:w-3/4 md:mt-20"
             />
           </div>
 
@@ -239,8 +260,8 @@ const MoreInfo = () => {
                 <span className="text-yellow "> you’re in!</span>
               </h1>
 
-              <div className="mt-8">
-                <div className="que my-4 ">
+              <div className="mt-20">
+                <div className="que my-2 ">
                   What feature is a no brainer for you?
                 </div>
 
@@ -254,7 +275,7 @@ const MoreInfo = () => {
                 />
               </div>
 
-              <div className="">
+              <div className="mt-10">
                 <div className="que mt-4">
                   Which of these are you most likely to do?
                 </div>
@@ -273,6 +294,28 @@ const MoreInfo = () => {
                   </button>
                 </div>
               </div>
+
+              <div className=" mt-6 md:mt-16 flex items-end flex-col">
+                
+                  <div className="progress">
+                    <div className="progress_indicator">
+                      <div
+                        className="bg-primary"
+                        style={{ width: "90%" }}
+                      ></div>
+                    </div>
+                    <div className="progress_title">Renting Items</div>
+                  </div>
+
+                  <div className="progress">
+                    <div className="progress_indicator">
+                      <div className="bg-orange" style={{ width: "40%" }}></div>
+                    </div>
+                    <div className="progress_title">Renting out my Items</div>
+                  </div>
+                
+              </div>
+
               <div>
                 <button className="mt-10 px-5 py-3 bg-yellow text-primary text-xl rounded-3xl">
                   Get access
@@ -306,8 +349,6 @@ const MoreInfo = () => {
           </div>
         </div>
       </form>
-
-     
     </div>
   );
 };

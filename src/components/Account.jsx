@@ -5,16 +5,16 @@ const Account = () => {
   return (
     <div className="md:mt-44 mt-20">
       <div className=" flex md:flex-row flex-col-reverse ">
-        <div className="wfull md:w-1/2 relative">
+        <div className="w-full md:w-1/2 relative">
           <img src={inventory} alt="srceens" className="block  mx-auto" />
           <div className="hidden md:inline-block w-16 h-16 bg-orange rounded-full absolute -top-20 -z-10 right-20 "></div>
 
-          <div className="w-16 h-16 bg-primary rounded-full absolute bottom-20 -z-10 right-28 "></div>
-          <div className="w-16 h-16 bg-yellow rounded-full absolute top-28 -z-10 left-28 "></div>
+          <div className=" hidden md:block w-16 h-16 bg-primary rounded-full absolute bottom-20 -z-10 right-28 "></div>
+          <div className=" hidden md:block w-16 h-16 bg-yellow rounded-full absolute top-28 -z-10 left-28 "></div>
         </div>
 
         {/* second row   */}
-        <div className="w-full md:w-1/2 md:flex md:justify-center md:items-center  ">
+        <div className="  w-full md:w-1/2 md:flex md:justify-center md:items-center  ">
           <div className="">
             <h1 className="text-orange text-2xl text-center md:text-left md:text-2xl leading-9 font-bold">
               Create an account today
