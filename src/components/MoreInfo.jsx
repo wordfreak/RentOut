@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaTimes, FaTimesCircle } from "react-icons/fa";
+import { FaCheck, FaMarker, FaTimes, FaTimesCircle } from "react-icons/fa";
 import book from "../assets/img/book.svg";
 import Done from "../assets/img/done.svg";
 import sticker from "../assets/img/sticker.svg";
@@ -67,7 +67,7 @@ const MoreInfo = () => {
         .then((r) => r.json())
         .then((res) => {
           // The response comes here
-          // console.log(res);
+          console.log(res);
           res ? setSubmited(!submited) : console.log("unable to upload");
         })
         .catch((error) => {
@@ -179,12 +179,13 @@ const MoreInfo = () => {
                     </label>
                     <input
                       type="radio"
-                      className="hidden"
+                      className="hidden checkbox"
                       name="medium"
                       id="friend"
                       value="friend"
                       onChange={handleChange}
                     />
+                    <FaCheck className="icon" />
                   </div>
 
                   <div className="form-group">
@@ -196,12 +197,13 @@ const MoreInfo = () => {
                     </label>
                     <input
                       type="radio"
-                      className="hidden"
+                      className="hidden checkbox"
                       name="medium"
                       id="SocialMedia"
                       value="social media"
                       onChange={handleChange}
                     />
+                    <FaCheck className="icon" />
                   </div>
 
                   <div className="form-group">
@@ -213,12 +215,13 @@ const MoreInfo = () => {
                     </label>
                     <input
                       type="radio"
-                      className="hidden"
+                      className="hidden checkbox"
                       name="medium"
                       id="google"
                       value="Google"
                       onChange={handleChange}
                     />
+                    <FaCheck className="icon" />
                   </div>
 
                   <div className="form-group">
@@ -227,12 +230,13 @@ const MoreInfo = () => {
                     </label>
                     <input
                       type="radio"
-                      className="hidden"
+                      className="hidden checkbox"
                       name="medium"
                       id="others"
                       value="Others"
                       onChange={handleChange}
                     />
+                    <FaCheck className="icon" />
                   </div>
                 </div>
               </div>
@@ -260,7 +264,7 @@ const MoreInfo = () => {
                 <span className="text-yellow "> you’re in!</span>
               </h1>
 
-              <div className="mt-20">
+              <div className="md:mt-20">
                 <div className="que my-2 ">
                   What feature is a no brainer for you?
                 </div>
@@ -279,7 +283,7 @@ const MoreInfo = () => {
                 <div className="que mt-4">
                   Which of these are you most likely to do?
                 </div>
-                <div className="space-x-7 mt-5">
+                <div className="space-x-7  mt-5">
                   <button
                     type="button"
                     className="pollButton text-primary border-primary"
@@ -288,32 +292,27 @@ const MoreInfo = () => {
                   </button>
                   <button
                     type="button"
-                    className="pollButton mt-8 md:mt-0 text-orange "
+                    className="pollButton mt-3 md:mt-0 text-orange "
                   >
                     Renting out my Items
                   </button>
                 </div>
               </div>
 
-              <div className=" mt-6 md:mt-16 flex items-end flex-col">
-                
-                  <div className="progress">
-                    <div className="progress_indicator">
-                      <div
-                        className="bg-primary"
-                        style={{ width: "90%" }}
-                      ></div>
-                    </div>
-                    <div className="progress_title">Renting Items</div>
+              <div className=" mt-6 md:mt-10 flex items-end flex-col">
+                <div className="progress">
+                  <div className="progress_indicator">
+                    <div className="bg-primary" style={{ width: "90%" }}></div>
                   </div>
+                  <div className="progress_title">Renting Items</div>
+                </div>
 
-                  <div className="progress">
-                    <div className="progress_indicator">
-                      <div className="bg-orange" style={{ width: "40%" }}></div>
-                    </div>
-                    <div className="progress_title">Renting out my Items</div>
+                <div className="progress">
+                  <div className="progress_indicator">
+                    <div className="bg-orange" style={{ width: "40%" }}></div>
                   </div>
-                
+                  <div className="progress_title">Renting out my Items</div>
+                </div>
               </div>
 
               <div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Camera from "../assets/img/camera.png";
+import Camera from "../assets/img/camera.svg";
 const Header = () => {
   return (
     <div>
@@ -15,6 +15,9 @@ const Header = () => {
             <h1 className="text-primary text-4xl md:text-6xl font-bold mb-8 text-center md:text-left">
               Now everything <br /> is yours!
             </h1>
+            <div className="md:hidden my-4">
+              <img src={Camera} alt="Big Man pic" className="" />
+            </div>
             <p className="text-xl md:w-10/12 text-center md:text-left leading-9 text-text">
               We're making it possible to rent anything, from wigs, gadgets,
               cars down to shortlet homes we have it! just for you
@@ -28,10 +31,10 @@ const Header = () => {
                 Get access Now!
               </Link>
             </p>
-            <div className="w-24 h-24 hidden md:inline-block bg-yellow rounded-full absolute -bottom-4 right-28"></div>
+            <div className="w-24 h-24 hidden md:inline-block -z-10 bg-yellow rounded-full absolute -bottom-4 right-28"></div>
           </div>
         </div>
-        <div className="w-full md:w-1/2 mt-16 md:mt-0 relative    ">
+        <div className=" hidden md:block w-full md:w-1/2 mt-16 md:mt-0 relative    ">
           <div className="">
             <div className="hidden md:block absolute -top-56 right-60  md:-top-24 md:left-5 bg-orange w-12 h-12 rounded-full"></div>
 

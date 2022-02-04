@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,500&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,500&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -108,7 +108,7 @@ body {
 }
 
 .form-group {
-  /* @apply mr- */
+  @apply relative;
 }
 
 .formGroup label {
@@ -135,6 +135,18 @@ form button {
   border-radius: 50px;
 }
 
+.checkbox + .icon {
+  display: none;
+}
+
+.icon {
+  @apply absolute top-3/4 right-1/4 transform -translate-x-1/2 -translate-y-1/2;
+}
+
+.checkbox:checked + .icon {
+  display: inline;
+}
+
 .social_icons {
   @apply text-2xl;
   color: #ff6e41;
@@ -153,7 +165,7 @@ form button {
 }
 
 .que {
-  @apply text-xl md:text-2xl leading-9;
+  @apply text-lg md:text-2xl leading-9;
 }
 .review {
   @apply py-4 my-4 text-2xl px-8;
@@ -179,7 +191,7 @@ form button {
   max-width: 394px;
 }
 .progress_title {
-  @apply w-full  md:w-5/12 ;
+  @apply w-full  md:w-5/12;
 }
 
 .progress_indicator {

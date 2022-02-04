@@ -37,9 +37,11 @@ const Footer = () => {
           </div>
           <div>
             Copyright 2021
-            <a href="#" className="inline-block mt-4 text-primary">
-              rentout.app
-            </a>
+            <span>
+              <a href="#" className="inline-block mt-4 text-primary">
+                rentout.app
+              </a>
+            </span>
           </div>
         </div>
       </div>
