@@ -13,9 +13,9 @@ const Platform = () => {
         {/* second row   */}
         <div className="w-full md:w-1/2 md:flex md:justify-center md:items-center  ">
           <div className="">
-            <h1 className="text-orange text-2xl text-center md:text-left md:text-2xl leading-9 font-bold">
+            {/* <h1 className="text-orange text-2xl text-center md:text-left md:text-2xl leading-9 font-bold">
               Original platform
-            </h1>
+            </h1> */}
             <div className="pt-4 text-center md:text-left text-3xl md:text-1xl font-bold leading-10">
               Insure your items <br className="hidden md:block" /> and Be at
               peace

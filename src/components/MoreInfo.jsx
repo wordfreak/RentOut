@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { FaCheck, FaMarker, FaTimes, FaTimesCircle } from "react-icons/fa";
+import {
+  FaCheck,
+  FaMarker,
+  FaRegTimesCircle,
+  FaTimes,
+  FaTimesCircle,
+} from "react-icons/fa";
 import book from "../assets/img/book.svg";
 import Done from "../assets/img/done.svg";
 import sticker from "../assets/img/sticker.svg";
@@ -25,6 +31,7 @@ const MoreInfo = () => {
   const [emailErr, setEmailErr] = useState(false);
   const [submited, setSubmited] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   // destructuring the client data
   const { name, email, number, medium, review } = client;
@@ -55,7 +62,6 @@ const MoreInfo = () => {
       name.length === 0 ? setNameErr(true) : setNameErr(false);
       email.length === 0 ? setEmailErr(true) : setEmailErr(false);
     } else {
-      setIsLoading(true);
       fetch(
         "https://sheet.best/api/sheets/4e64ad38-2195-46b8-9fac-6ed5e98088a1",
         {
@@ -71,17 +77,21 @@ const MoreInfo = () => {
         .then((res) => {
           // The response comes here
           // console.log(r);
+
           res ? setSubmited(!submited) : console.log("unable to upload");
           setIsLoading(false);
         })
         .catch((error) => {
           // Errors are reported there
           console.log("gate way eror");
+          setIsLoading(false);
+          setError(true);
         });
 
       // console.log(client);
       window.localStorage.removeItem("client");
     }
+    setIsLoading(false);
   };
 
   return (
@@ -316,26 +326,55 @@ const MoreInfo = () => {
             </div>
           </div>
 
-          {/* SUCCESS MODAL CODE  */}
+          {/* upload Fail MODAL CODE  */}
 
           <div
             className={` ${
-              submited ? "block" : "hidden"
+              error ? "block" : "hidden"
             }  fixed top-0 bottom-0 left-0 w-full modal`}
-            onClick={submittion}
+            onClick={() => setError(!error)}
           >
             <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-4/12 bg-white rounded-3xl p-4 md:px-9 md:py-12 ">
               <div className="text-right">
                 <FaTimes
                   className="inline text-dim cursor-pointer "
-                  onClick={submittion}
+                  onClick={() => setError(false)}
                 />
               </div>
-              <img src={Done} alt="" className="block mx-auto" />
+              {/* <img src={Done} alt="" className="block mx-auto" /> */}
+
+              <FaRegTimesCircle className="block mx-auto  text-4xl" />
 
               <div className="text-center md:text-xl font-bold mt-4 md:mt-8">
-                <span className="text-orange"> Correct guy!</span> welcome to
-                the club
+                <span className="text-orange"> Unable To upload !</span> Pls Try
+                again.
+              </div>
+            </div>
+          </div>
+          {/* Loading MODAL CODE  */}
+
+          <div
+            className={` ${
+              isLoading ? "block" : "hidden"
+            }  fixed top-0 bottom-0 left-0 w-full modal`}
+          >
+            <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-4/12 bg-white rounded-3xl p-4 md:px-9 md:py-12 ">
+              <div className="text-right">
+                {/* <FaTimes className="inline text-dim cursor-pointer " /> */}
+              </div>
+
+              <div className="bg-white flex space-x-2 p-5 rounded-full justify-center items-center">
+                <div className="bg-primary p-2  w-4 h-4 rounded-full animate-bounce blue-circle"></div>
+                <div className="bg-yellow p-2 w-4 h-4 rounded-full animate-bounce green-circle"></div>
+                <div className="bg-orange p-2  w-4 h-4 rounded-full animate-bounce red-circle"></div>
+                <div className="bg-dim p-2  w-4 h-4 rounded-full animate-bounce dim-circle"></div>
+              </div>
+              {/* <img src={Done} alt="" className="block mx-auto" /> */}
+
+              {/* <FaRegTimesCircle className="block mx-auto  text-4xl" /> */}
+
+              <div className="text-center md:text-xl font-bold mt-4 md:mt-8">
+                <span className="text-orange"> Loading...</span> Pls wait!
               </div>
             </div>
           </div>

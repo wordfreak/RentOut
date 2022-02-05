@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,500&display=swap"); */
 
 @tailwind base;
 @tailwind components;
@@ -237,6 +237,18 @@ form button {
   background-image: url(./assets/img/bgsticker.svg);
   background-repeat: no-repeat;
   background-position-y: bottom;
+}
+.dim-circle {
+  animation-delay: 0.1s;
+}
+.blue-circle {
+  animation-delay: 0.2s;
+}
+.green-circle {
+  animation-delay: 0.3s;
+}
+.red-circle {
+  animation-delay: 0.4s;
 }
 
 @media screen and (max-width: 768px) {

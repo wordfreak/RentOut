@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../assets/img/AppLogo.png";
+import Logo from "../assets/img/AppLogo.svg";
 
 const Nav = () => {
   const [showNav, setShowNav] = useState(false);
@@ -17,8 +17,8 @@ const Nav = () => {
           {/* <div className="flex space-x-20 h-16 items-center"> */}
           <div>
             {/* <!-- Website Logo --> */}
-            <Link to="/" className="">
-              <img src={Logo} alt="Logo" className=" mr-2" />
+            <Link to="/">
+              <img src={Logo} alt="Logo" className=" w-40 mr-2" />
             </Link>
           </div>
           {/* <!-- Primary Navbar items --> */}
