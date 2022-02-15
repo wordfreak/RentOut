@@ -51,7 +51,7 @@ const Form = ({ button }) => {
       //   });
       localStorage.setItem("client", JSON.stringify(client));
 
-      navigate("/contact");
+      navigate("/moreinfo");
       // console.log(client);
     }
   };
