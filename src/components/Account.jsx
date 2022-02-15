@@ -19,10 +19,10 @@ const Account = () => {
             {/* <h1 className="text-orange text-2xl text-center md:text-left md:text-2xl leading-9 font-bold">
               Create an account today
             </h1> */}
-            <div className="pt-4 text-center md:text-left text-3xl md:text-1xl font-bold leading-10">
+            <div className="pt-4 text-primary text-center md:text-left text-3xl md:text-1xl font-bold leading-10">
               Everyday Items, by <br /> the hour.
             </div>
-            <div className="text-xl md:text-2xl leading-9 pt-5 text-center md:text-left text-text ">
+            <div className="info_text  leading-9 pt-5 text-center md:text-left  ">
               Rentout offers an easy way to bring in extra cash by renting out
               the things you don't use! We'll handle all the requests and
               negotiate payments on your behalf.

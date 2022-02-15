@@ -1,6 +1,12 @@
 import React from "react";
+import { useState } from "react/cjs/react.development";
 
 const Poll = () => {
+  const [poll, SetPoll] = useState(false)
+const handlePollResult = () =>{
+SetPoll(true)
+} 
+
   return (
     <div>
       <div>
@@ -12,19 +18,22 @@ const Poll = () => {
             <button
               type="button"
               className="pollButton text-primary border-primary"
+              onClick={handlePollResult}
             >
               Renting Items
             </button>
             <button
               type="button"
               className="pollButton mt-3 md:mt-0 text-orange "
+              onClick={handlePollResult}
+
             >
               Renting out my Items
             </button>
           </div>
         </div>
 
-        <div className=" mt-6 md:mt-10 flex items-end flex-col">
+        <div className={`${!poll ? "hidden": "block" }  mt-6 md:mt-10 flex items-end flex-col` }  >
           <div className="progress">
             <div className="progress_indicator">
               <div className="bg-primary" style={{ width: "90%" }}></div>

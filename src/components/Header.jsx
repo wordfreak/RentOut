@@ -18,7 +18,7 @@ const Header = () => {
             <div className="md:hidden my-4">
               <img src={Camera} alt="Big Man pic" className="" />
             </div>
-            <p className="text-xl md:w-10/12 text-center md:text-left leading-9 text-text">
+            <p className=" info_text  md:w-10/12 text-center md:text-left leading-9 ">
               We're making it possible to rent anything, from wigs, gadgets,
               cars down to shortlet homes we have it! just for you
             </p>

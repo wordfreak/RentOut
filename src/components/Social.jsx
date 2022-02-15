@@ -19,7 +19,7 @@ const Social = () => {
 
         <div className="flex items-center justify-center w-full md:w-1/2">
           <div>
-            <h1 className="font-bold text-center  text-1xl leading-10 tracking-normal  md:tracking-wide">
+            <h1 className="font-bold text-center  text-3xl leading-10 tracking-normal  md:tracking-wide">
               Hey! Follow us on social media so you don’t miss any offer.
             </h1>
             <div className="flex justify-center items-center   pt-8 social_icons">

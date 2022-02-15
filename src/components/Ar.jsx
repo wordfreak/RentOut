@@ -8,11 +8,11 @@ const Ar = () => {
         <div className="w-full md:w-1/2 relative flex items-center justify-center md:px-12 text-center md:text-left">
           <div>
             <div className="hidden md:block w-14 h-14 bg-orange rounded-full absolute right-0 -top-16"></div>
-            <h1 className="font-bold text-3xl md:text-1xl md:text-6xl">
+            <h1 className="font-bold text-primary text-3xl md:text-1xl md:text-6xl">
               Experience products in AR
             </h1>
 
-            <div className=" text-xl md:text-2xl leading-9 pt-6 text-center md:text-left">
+            <div className=" info_text leading-9 pt-6 text-center md:text-left">
               Have you tried Augmented Reality? Stop looking at boring galleries
               and start experiences each item just as they would be.
             </div>

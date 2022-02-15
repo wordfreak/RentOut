@@ -13,7 +13,7 @@ import Bgsticker from "../assets/img/bgsticker.svg";
 import { useNavigate } from "react-router-dom";
 import smallSticker from "../assets/img/SmallbgSticker.png";
 import smallSticker2 from "../assets/img/SmallbgSticker2.png";
-import Footer from "./Footer";
+import Finish from "../assets/img/finish.svg";
 import Poll from "./Poll";
 
 const MoreInfo = () => {
@@ -32,6 +32,7 @@ const MoreInfo = () => {
   const [submited, setSubmited] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [back, setBack] = useState(false);
 
   // destructuring the client data
   const { name, email, number, medium, review } = client;
@@ -62,6 +63,7 @@ const MoreInfo = () => {
       name.length === 0 ? setNameErr(true) : setNameErr(false);
       email.length === 0 ? setEmailErr(true) : setEmailErr(false);
     } else {
+      setIsLoading(true);
       fetch(
         "https://sheet.best/api/sheets/4e64ad38-2195-46b8-9fac-6ed5e98088a1",
         {
@@ -76,10 +78,9 @@ const MoreInfo = () => {
         .then((r) => r.json())
         .then((res) => {
           // The response comes here
-          // console.log(r);
+          setIsLoading(false);
 
           res ? setSubmited(!submited) : console.log("unable to upload");
-          setIsLoading(false);
         })
         .catch((error) => {
           // Errors are reported there
@@ -88,10 +89,9 @@ const MoreInfo = () => {
           setError(true);
         });
 
-      // console.log(client);
+      console.log(client);
       window.localStorage.removeItem("client");
     }
-    setIsLoading(false);
   };
 
   return (
@@ -186,7 +186,7 @@ const MoreInfo = () => {
 
                   <div className="form-group">
                     <label
-                      className="text-primary border-primary"
+                      className="text-primary  border-primary friend"
                       htmlFor="friend"
                     >
                       A friend
@@ -199,12 +199,11 @@ const MoreInfo = () => {
                       value="friend"
                       onChange={handleChange}
                     />
-                    <FaCheck className="icon" />
                   </div>
 
                   <div className="form-group">
                     <label
-                      className="text-orange border-orange"
+                      className="text-orange border-orange social"
                       htmlFor="SocialMedia"
                     >
                       Social media
@@ -217,7 +216,6 @@ const MoreInfo = () => {
                       value="social media"
                       onChange={handleChange}
                     />
-                    <FaCheck className="icon" />
                   </div>
 
                   <div className="form-group">
@@ -235,7 +233,6 @@ const MoreInfo = () => {
                       value="Google"
                       onChange={handleChange}
                     />
-                    <FaCheck className="icon" />
                   </div>
 
                   <div className="form-group">
@@ -250,7 +247,6 @@ const MoreInfo = () => {
                       value="Others"
                       onChange={handleChange}
                     />
-                    <FaCheck className="icon" />
                   </div>
                 </div>
               </div>
@@ -293,7 +289,9 @@ const MoreInfo = () => {
                 />
               </div>
 
+              {/* The  Poll component  */}
               <Poll />
+
               <div>
                 <button className="mt-10 px-5 py-3 bg-yellow text-primary text-xl rounded-3xl">
                   Get access
@@ -310,7 +308,7 @@ const MoreInfo = () => {
             }  fixed top-0 bottom-0 left-0 w-full modal`}
             onClick={submittion}
           >
-            <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-4/12 bg-white rounded-3xl p-4 md:px-9 md:py-12 ">
+            <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-6/12 bg-white rounded-3xl p-4 md:px-9 md:py-12 ">
               <div className="text-right">
                 <FaTimes
                   className="inline text-dim cursor-pointer "
@@ -322,6 +320,13 @@ const MoreInfo = () => {
               <div className="text-center md:text-xl font-bold mt-4 md:mt-8">
                 <span className="text-orange"> Correct guy!</span> welcome to
                 the club
+              </div>
+
+              <div className="text-center mt-8">
+                <button className="text-lg  font-bold text-primary rounded-md border-2 py-1 px-8 border-primary ">
+                  {" "}
+                  Done{" "}
+                </button>
               </div>
             </div>
           </div>
@@ -375,6 +380,40 @@ const MoreInfo = () => {
 
               <div className="text-center md:text-xl font-bold mt-4 md:mt-8">
                 <span className="text-orange"> Loading...</span> Pls wait!
+              </div>
+            </div>
+          </div>
+
+          {/* Client going  Back MOdal  */}
+
+          <div
+            className={` ${
+              back ? "block" : "hidden"
+            }  fixed top-0 bottom-0 left-0 w-full modal`}
+            onClick={() => setBack(false)}
+          >
+            <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-6/12 bg-white rounded-3xl p-4 md:px-9 md:py-12 ">
+              <div className="text-right">
+                <FaTimes
+                  className="inline text-dim cursor-pointer "
+                  onClick={() => setError(false)}
+                />
+              </div>
+              <div className="relative">
+                <div
+                  className="absolute bottom-6 left-20 text-primary md:leading-9 md:text-2xl font-bold text-center
+                 "
+                >
+                  You for finish am <br />{" "}
+                  <span className="md:text-4xl">join our club o!</span>
+                </div>
+                <img src={Finish} alt="" className="block mx-auto" />
+              </div>
+              <div className="text-center mt-10">
+                <button className="back-button finish">
+                  Let’s finish this
+                </button>
+                <button className="back-button out">Take me out</button>
               </div>
             </div>
           </div>

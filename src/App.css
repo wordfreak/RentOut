@@ -25,6 +25,10 @@ body {
   margin: 0 auto;
 }
 
+.info_text {
+  @apply text-xl md:text-2xl text-text;
+}
+
 .page_body {
   background-image: url(./assets/img/headerBg.png);
   background-repeat: no-repeat;
@@ -135,16 +139,8 @@ form button {
   border-radius: 50px;
 }
 
-.checkbox + .icon {
-  display: none;
-}
-
 .icon {
   @apply absolute top-3/4 right-1/4 transform -translate-x-1/2 -translate-y-1/2;
-}
-
-.checkbox:checked + .icon {
-  display: inline;
 }
 
 .social_icons {
@@ -153,11 +149,23 @@ form button {
 }
 
 .modal {
-  background-color: rgba(0, 0, 0, 0.678);
+  /* @apply; */
+  background-color: #c4c4c4a6;
+  /* opacity: 0.5;   */
 }
+
 .modal-box {
   @apply bg-white absolute rounded-md top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
   max-width: 400px;
+}
+.back-button {
+  @apply rounded-lg py-3 px-4 md:text-lg font-bold;
+}
+.back-button.finish {
+  @apply bg-orange text-white mr-4;
+}
+.back-button.out {
+  @apply bg-transparent border;
 }
 
 .active {
@@ -231,6 +239,10 @@ form button {
   /* max-width: 16px; */
 }
 
+.checkbox:checked .gist label {
+  @apply bg-primary;
+}
+
 .formSticker {
   /* @apply; */
 
@@ -238,7 +250,7 @@ form button {
   background-repeat: no-repeat;
   background-position-y: bottom;
 }
-.dim-circle {
+/* .dim-circle {
   animation-delay: 0.1s;
 }
 .blue-circle {
@@ -249,7 +261,7 @@ form button {
 }
 .red-circle {
   animation-delay: 0.4s;
-}
+} */
 
 @media screen and (max-width: 768px) {
   .page_body {

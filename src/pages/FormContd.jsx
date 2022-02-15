@@ -1,10 +1,10 @@
 import React from "react";
 import Nav from "../components/Nav";
 import smallBox from "../assets/img/smallCircle.png";
+import MoreInfo from "../components/MoreInfo";
 import Footer from "../components/Footer";
-import ContactUs from "../components/ContactUs";
 
-const Contact = () => {
+const FormContd = () => {
   return (
     <div className="relative page_body min-h-screen ">
       {/* small boxx div  */}
@@ -21,7 +21,7 @@ const Contact = () => {
             <Nav />
           </div>
           <div className="px-4">
-            <ContactUs />
+            <MoreInfo />
           </div>
         </div>
       </div>
@@ -30,4 +30,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default FormContd;

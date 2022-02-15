@@ -7,16 +7,14 @@ import Social from "./components/Social";
 import Contact from "./pages/Contact";
 
 import HomePage from "./pages/HomePage";
-import Poll from "./pages/Poll";
 
 const App = () => {
   return (
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />}></Route>{" "}
+          <Route path="/" element={<HomePage />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/poll" element={<Poll />}></Route>
           <Route path="*" element={<Error />}></Route>
         </Routes>
       </Router>
