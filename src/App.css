@@ -217,7 +217,7 @@ form button {
 }
 
 .footer_link {
-  @apply inline-block mx-4;
+  @apply inline-block  mr-4 md:mr-8  ;
 }
 .header {
   @apply text-2xl text-center md:text-right  md:text-3xl text-primary font-bold;
