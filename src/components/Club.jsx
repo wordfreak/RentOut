@@ -10,7 +10,7 @@ const Club = () => {
           <img
             src={memeber}
             alt="Members picture"
-            className="block mt-10 mx-auto"
+            className="hidden md:block mt-10 mx-auto"
           />
           <div className=" hidden md:inline-block w-14 h-14 bg-orange rounded-full absolute -top-20 -z-10 right-0 "></div>
 
@@ -21,9 +21,25 @@ const Club = () => {
         {/* second row   */}
         <div className="w-full md:w-1/2 md:flex md:justify-center md:items-center   ">
           <div className="">
-            <div className="pt-4 text-primary text-center md:text-right text-3xl  md:text-1xl font-bold leading-10">
+            <div className="hidden md:block pt-4 text-primary text-center md:text-right text-3xl  md:text-1xl font-bold leading-10">
               500+ Club members <br /> and counting
             </div>
+
+            {/* mobile view start */}
+
+            <h1 className="md:hidden text-2xl text-center font-bold">
+              500 <span className="text-orange">+</span> Club members <br /> and
+              <span className="text-yellow"> counting</span>
+            </h1>
+
+            <img
+              src={memeber}
+              alt="Members picture"
+              className="md:hidden mt-10 mx-auto"
+            />
+
+            {/* mobile view  end */}
+
             <div className=" info_text leading-9 pt-5 text-center md:text-right text-text ">
               stay in the loop and get a front row seat{" "}
               <br className="hidden md:block" /> with exclusive offers when we
@@ -31,7 +47,7 @@ const Club = () => {
             </div>
             <p className=" text-center md:text-right mt-5">
               <Link to="/contact">
-                <button className="spot text-primary font-bold text-xl">
+                <button className=" bg-yellow py-3 px-7 rounded-ten text-primary font-bold text-sm md:text-xl">
                   Book your spot
                 </button>
               </Link>

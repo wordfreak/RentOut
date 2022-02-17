@@ -56,11 +56,11 @@ const ContactUs = () => {
             <img
               src={Girl}
               alt="connect with us pic"
-              className="w-72 md:w-full"
+              className="w-60 md:w-full"
             />
           </div>
           {/* second row */}
-          <div className="w-full md:w-1/2 md:text-4xl font-bold flex items-center justify-end">
+          <div className=" absolute md:relative right-1 top-24 w-full md:w-1/2 text-lg md:text-4xl font-bold flex items-center justify-end">
             <div>
               <div className=" text-orange  text-right ">Don’t be shy</div>
               <div className="text-primary">
@@ -74,7 +74,7 @@ const ContactUs = () => {
         </div>
 
         <div className="mt-20 text-center">
-          <button className="border rounded-lg border-primary py-3 px-4 font-bold text-lg ">
+          <button className="border rounded-ten border-primary py-3 px-4 font-bold text-lg ">
             Take me home{" "}
           </button>
         </div>

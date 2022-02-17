@@ -137,7 +137,7 @@ const Form = ({ button }) => {
           {/* second column  */}
           <div className="w-full md:w-1/2 mt-10 md:mt-0">
             <div className="formGroup">
-              <label htmlFor="medium ">How did you get the gist?</label>
+              <label htmlFor="medium" className="text-lg font-bold text-orange">How did you get the gist?</label>
 
               {/* Medium radio button  container  */}
 

@@ -13,13 +13,15 @@ const GetAccess = () => {
 
       {/* Circle boxes end  */}
 
-      <h1 className=" md:text-4xl text-3xl leading-10 -tracking-wide text-primary text-center font-bold">
-        Take the first step to{" "}
+      <h1 className=" md:text-4xl text-2xl leading-10 -tracking-wide text-primary text-center font-bold">
+        Take the first step to <br className="md:hidden" />
         <span className="text-orange ">living your best life!</span>
       </h1>
 
       {/* Form code  */}
-      <div className="mt-12"><Form button={true} /></div>
+      <div className="mt-12">
+        <Form button={true} />
+      </div>
     </div>
   );
 };

@@ -17,6 +17,13 @@ module.exports = {
       letterSpacing: {
         tighter: "0.2px",
       },
+
+      screens: {
+        sm: { min: "432px" },
+      },
+      borderRadius: {
+        ten: "10px",
+      },
     },
   },
   plugins: [],

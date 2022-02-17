@@ -20,7 +20,7 @@ const HomePage = () => {
       <img
         src={smallBox}
         alt="smallBox"
-        className="hidden md:block absolute w-52 imgBg"
+        className=" md:block absolute w-52 imgBg"
       />
       {/* small box div  */}
 
