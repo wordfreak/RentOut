@@ -13,7 +13,7 @@ const Platform = () => {
           <span className="text-orange">Security</span> <br />
           is a priority, <br /> Be
           <span className="text-yellow"> at peace</span>
-          <div  className="mt-10">
+          <div className="mt-10">
             <img src={Plant} alt="" />
           </div>
         </h1>
