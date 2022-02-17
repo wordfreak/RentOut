@@ -14,7 +14,7 @@ const Platform = () => {
           is a priority, <br /> Be
           <span className="text-yellow"> at peace</span>
           <div className="mt-10">
-            <img src={Plant} alt="" />
+            <img src={Plant} alt="Plant Frame" />
           </div>
         </h1>
 
