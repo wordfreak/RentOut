@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,500&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,500&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -230,12 +230,12 @@ form button {
   @apply flex gap-6 flex-wrap mt-4 justify-center;
 } */
 
-.gist{
-  @apply flex gap-6 md:gap-4 flex-wrap justify-center md:justify-start ;
+.gist {
+  @apply flex gap-6 md:gap-4 flex-wrap justify-center md:justify-start;
 }
 
-.gist .form-group{
-  @apply  md:w-auto;
+.gist .form-group {
+  @apply md:w-auto;
 }
 
 .gist label {

@@ -1,7 +1,6 @@
 import React from "react";
 import insurance from "../assets/img/insurance.png";
-// import Plant from "../assets/img/plant.svg";
-
+import Plants from "../assets/img/Plant.svg";
 const Platform = () => {
   return (
     <div className=" mt-16 md:mt-44 relative ">
@@ -13,8 +12,8 @@ const Platform = () => {
           <span className="text-orange">Security</span> <br />
           is a priority, <br /> Be
           <span className="text-yellow"> at peace</span>
-          <div className="mt-10">
-            {/* <img src={Plant} alt="Plant Frame" /> */}
+          <div className="mt-4">
+            <img src={Plants} alt="Plant Frame" />
           </div>
         </h1>
 
