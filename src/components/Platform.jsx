@@ -7,7 +7,7 @@ const Platform = () => {
       {/* <div className="w-44 h-44 -right-80 bg-orange rounded-full absolute top-0 -z-10  "></div> */}
 
       {/* mobile view start  */}
-      <div className="flex justify-evenly items-center">
+      <div className="flex justify-between items-center">
         <h1 className="md:hidden text-primary text-2xl md:text-6xl font-bold mb-8  md:text-left">
           <span className="text-orange">Security</span> <br />
           is a priority, <br /> Be

@@ -11,7 +11,7 @@ const Header = () => {
             <div className="hidden md:inline-block absolute bottom-20 -top-5 -left-48 border bg-orange w-14 h-14 rounded-full"></div>
 
             {/* MObile view   code  */}
-            <div className="flex justify-evenly items-center">
+            <div className="flex justify-between items-center">
               <h1 className="md:hidden text-primary text-xl md:text-6xl font-bold mb-8  md:text-left">
                 Now <span className="text-orange">everything</span> <br /> is{" "}
                 <span className="text-yellow">yours!</span>

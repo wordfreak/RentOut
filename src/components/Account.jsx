@@ -21,7 +21,7 @@ const Account = () => {
             </div>
 
             {/* Mobile screen Start */}
-            <div className="flex justify-evenly items-center">
+            <div className="flex justify-between items-center">
               <div>
                 <img
                   src={inventory}
