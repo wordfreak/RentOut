@@ -12,7 +12,7 @@ const Offers = () => {
             from <br className="md:hidden" /> top renters{" "}
             <span className="">when we launch</span>
             <p>
-              <Link to="/contact">
+              <Link to="/moreinfo">
                 <button className="access hidden md:block text-xl mt-4 text-orange py-4 px-8 w-64 ">
                   Get Access Now!
                 </button>
@@ -22,11 +22,11 @@ const Offers = () => {
         </div>
 
         <div className="w-full md:w-1/2 mt-8 md:mt-0  ">
-          <img src={offer} alt="Mobile hand pic" className="" />
+          <img src={offer} alt="More offer pictures" className="" />
         </div>
       </div>
       <div className="text-center mt-12 ">
-        <Link to="/moredetails">
+        <Link to="/moreinfo">
           <button className="md:hidden text-lg text-orange font-bold border-2 border-primary px-4 py-3 rounded-full">
             Get Access Now!
           </button>

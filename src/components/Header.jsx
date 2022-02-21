@@ -10,8 +10,8 @@ const Header = () => {
             {/* pink box  */}
             <div className="hidden md:inline-block absolute bottom-20 -top-5 -left-48 border bg-orange w-14 h-14 rounded-full"></div>
 
-            {/* MObile view  */}
-            <div className="flex justify-between items-center">
+            {/* MObile view   code  */}
+            <div className="flex justify-evenly items-center">
               <h1 className="md:hidden text-primary text-xl md:text-6xl font-bold mb-8  md:text-left">
                 Now <span className="text-orange">everything</span> <br /> is{" "}
                 <span className="text-yellow">yours!</span>
@@ -31,12 +31,10 @@ const Header = () => {
               cars down to shortlet homes we have it! just for you
             </p>
             <p className="text-center md:text-left">
-              <Link
-                to="/contact"
-                href="#"
-                className=""
-              >
-                <button className="text-xs md:text-lg mt-6 font-bold text-white bg-orange py-3 px-4 rounded-ten" >Get access Now!</button>
+              <Link to="/moreinfo" href="#" className="">
+                <button className="text-xs md:text-lg mt-6 font-bold text-white bg-orange py-3 px-4 rounded-ten">
+                  Get access Now!
+                </button>
               </Link>
             </p>
             <div className="w-24 h-24 hidden md:inline-block -z-10 bg-yellow rounded-full absolute -bottom-4 right-28"></div>

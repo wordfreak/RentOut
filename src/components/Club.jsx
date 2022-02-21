@@ -46,7 +46,7 @@ const Club = () => {
               launch
             </div>
             <p className=" text-center md:text-right mt-5">
-              <Link to="/contact">
+              <Link to="/moreinfo">
                 <button className=" bg-yellow py-3 px-7 rounded-ten text-primary font-bold text-sm md:text-xl">
                   Book your spot
                 </button>

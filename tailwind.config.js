@@ -9,6 +9,7 @@ module.exports = {
         text: "#737373 ",
         pink: " #FAB8C5",
         dim: "#D8D8D8;",
+        very_dim: "#9A9999",
       },
       fontSize: {
         "1xl": "2.50rem",

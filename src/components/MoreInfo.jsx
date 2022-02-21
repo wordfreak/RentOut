@@ -372,7 +372,7 @@ const MoreInfo = () => {
                 <div className="bg-primary p-2  w-4 h-4 rounded-full animate-bounce blue-circle"></div>
                 <div className="bg-yellow p-2 w-4 h-4 rounded-full animate-bounce green-circle"></div>
                 <div className="bg-orange p-2  w-4 h-4 rounded-full animate-bounce red-circle"></div>
-                <div className="bg-dim p-2  w-4 h-4 rounded-full animate-bounce dim-circle"></div>
+               
               </div>
               {/* <img src={Done} alt="" className="block mx-auto" /> */}
 

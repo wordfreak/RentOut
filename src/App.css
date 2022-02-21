@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,500&display=swap"); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 button {
@@ -139,8 +139,8 @@ form button {
 }
 
 .social_icons {
-  @apply text-2xl;
-  color: #ff6e41;
+  @apply text-2xl text-orange;
+  
 }
 
 .modal {
@@ -231,7 +231,7 @@ form button {
 } */
 
 .gist {
-  @apply flex gap-6 md:gap-4 flex-wrap justify-center md:justify-start;
+  @apply flex  md:gap-4 flex-wrap gap-6 justify-center md:justify-start items-center pt-8 md:pt-0;
 }
 
 .gist .form-group {
@@ -239,12 +239,13 @@ form button {
 }
 
 .gist label {
-  @apply text-base m-0 px-4 py-2 cursor-pointer text-center border rounded-full font-bold;
+  @apply text-base m-0 px-5 py-2 cursor-pointer text-center border rounded-full font-bold;
   /* max-width: 16px; */
+  min-width: 126px;
 }
 
-.checkbox:checked .gist label {
-  @apply bg-primary;
+.checkbox:checked + icon {
+  @apply hidden;
 }
 
 .formSticker {
@@ -254,7 +255,7 @@ form button {
   background-repeat: no-repeat;
   background-position-y: bottom;
 }
-/* .dim-circle {
+.dim-circle {
   animation-delay: 0.1s;
 }
 .blue-circle {
@@ -265,7 +266,7 @@ form button {
 }
 .red-circle {
   animation-delay: 0.4s;
-} */
+}
 
 @media screen and (max-width: 768px) {
   .bigMan {
@@ -287,5 +288,8 @@ form button {
     /* @apply; */
 
     background-image: none;
+  }
+  .social_icons {
+    max-width: 244px;
   }
 }

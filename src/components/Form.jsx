@@ -86,7 +86,9 @@ const Form = ({ button }) => {
           {/* first column */}
           <div className="w-full md:w-1/2">
             <div className="formGroup">
-              <label htmlFor="name">Full Name</label>
+              <label htmlFor="name">
+                Full Name <sup className="text-orange">*</sup>{" "}
+              </label>
               <input
                 type="text"
                 name="name"
@@ -102,7 +104,9 @@ const Form = ({ button }) => {
           {/* second column  */}
           <div className="w-full md:w-1/2  mt-10 md:mt-0">
             <div className="formGroup">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">
+                Email <sup className="text-orange">*</sup>
+              </label>
               <input
                 type="email"
                 name="email"
@@ -137,7 +141,12 @@ const Form = ({ button }) => {
           {/* second column  */}
           <div className="w-full md:w-1/2 mt-10 md:mt-0">
             <div className="formGroup">
-              <label htmlFor="medium" className="text-lg font-bold text-orange">How did you get the gist?</label>
+              <label
+                htmlFor="medium"
+                className="text-lg font-bold text-orange md:text-primary"
+              >
+                How did you get the gist?
+              </label>
 
               {/* Medium radio button  container  */}
 
@@ -221,7 +230,7 @@ const Form = ({ button }) => {
           <div className="text-center">
             <button
               onClick={handleSubmit}
-              className="bg-orange text-white text-2xl w-60 mt-28 "
+              className="bg-orange text-white text-lg font-bold md:text-2xl  mt-16 rounded-2xl py-2 px-4 "
             >
               Let’s do this
             </button>
