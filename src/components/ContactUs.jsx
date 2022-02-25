@@ -7,6 +7,7 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const ContactUs = () => {
   return (
     <div className="">
@@ -74,9 +75,11 @@ const ContactUs = () => {
         </div>
 
         <div className="mt-20 text-center">
-          <button className="border rounded-ten border-primary py-3 px-4 font-bold text-lg ">
-            Take me home{" "}
-          </button>
+          <Link to="/">
+            <button className="border rounded-ten border-primary py-3 px-4 font-bold text-lg ">
+              Take me home{" "}
+            </button>
+          </Link>
         </div>
       </div>
     </div>
