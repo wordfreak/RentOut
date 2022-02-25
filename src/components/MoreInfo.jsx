@@ -312,7 +312,7 @@ const MoreInfo = () => {
               <Poll mission={mission} handleChange={handleChange} />
 
               <div>
-                <button className="mt-10 px-5 py-3 bg-yellow text-primary text-sm rounded-3xl">
+                <button className="mt-10 px-5 py-3 bg-yellow text-primary text-sm md:text-xl rounded-3xl">
                   Get access
                 </button>
               </div>
