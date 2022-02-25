@@ -21,9 +21,11 @@ const Header = () => {
                 <img src={Camera} alt="Big Man pic" className="w-40" />
               </div>
             </div>
+            {/* MObile view   code end */}
 
             <h1 className="hidden md:block text-primary text-4xl md:text-6xl font-bold mb-8 text-center md:text-left">
-              Now everything <br /> is yours!
+              Now <span className="text-orange">everything</span> <br /> is{" "}
+              <span className="text-yellow">yours!</span>
             </h1>
 
             <p className=" info_text  md:w-10/12 text-center md:text-left leading-9 ">

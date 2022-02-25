@@ -1,20 +1,16 @@
 import React, { useEffect, useState } from "react";
-import {
-  FaCheck,
-  FaMarker,
-  FaRegTimesCircle,
-  FaTimes,
-  FaTimesCircle,
-} from "react-icons/fa";
+
 import book from "../assets/img/book.svg";
-import Done from "../assets/img/done.svg";
 import sticker from "../assets/img/sticker.svg";
-import Bgsticker from "../assets/img/bgsticker.svg";
+import bgsticker from "../assets/img/bgsticker.svg";
+import bookTwo from "../assets/img/bookTwo.svg";
+import stickerhead from "../assets/img/stickerhead.svg";
 import { useNavigate } from "react-router-dom";
-import smallSticker from "../assets/img/SmallbgSticker.png";
-import smallSticker2 from "../assets/img/SmallbgSticker2.png";
-import Finish from "../assets/img/finish.svg";
 import Poll from "./Poll";
+import Failed from "./Modals/Failed";
+import Loading from "./Modals/Loading";
+import ExitWarning from "./Modals/ExitWarning";
+import Success from "./Modals/Success";
 
 const MoreInfo = () => {
   const navigate = useNavigate();
@@ -24,6 +20,7 @@ const MoreInfo = () => {
     number: "",
     medium: "",
     review: "",
+    mission: "",
   };
 
   const [client, setClient] = useState(initialData);
@@ -35,7 +32,7 @@ const MoreInfo = () => {
   const [back, setBack] = useState(false);
 
   // destructuring the client data
-  const { name, email, number, medium, review } = client;
+  const { name, email, number, medium, review, mission } = client;
 
   // function is checking if the localstorage have any data in it already!
 
@@ -171,82 +168,73 @@ const MoreInfo = () => {
 
                 {/* Medium radio button  container  */}
 
-                <div className="gist relative">
-                  <img
-                    src={smallSticker}
-                    alt="small sticker"
-                    className=" hidden md:block absolute -right-16 -top-3"
-                  />
-
-                  <img
-                    src={smallSticker2}
-                    alt="small sticker"
-                    className=" hidden md:block absolute left-36 -bottom-32"
-                  />
-
+                <div className="gist">
                   <div className="form-group">
-                    <label
-                      className="text-primary  border-primary friend"
-                      htmlFor="friend"
-                    >
-                      A friend
-                    </label>
                     <input
                       type="radio"
-                      className="hidden checkbox"
                       name="medium"
                       id="friend"
                       value="friend"
+                      className="hidden"
                       onChange={handleChange}
                     />
+                    <label
+                      htmlFor="friend"
+                      className="text-primary border-primary  label-checked:bg-primary label-checked:text-orange"
+                    >
+                      A Friend
+                    </label>
                   </div>
 
                   <div className="form-group">
+                    <input
+                      type="radio"
+                      className="hidden"
+                      name="medium"
+                      id="SocialMedia"
+                      value="Social Media"
+                      onChange={handleChange}
+                    />
                     <label
-                      className="text-orange border-orange social"
                       htmlFor="SocialMedia"
+                      className="text-orange border-orange  label-checked:bg-orange label-checked:text-white"
                     >
                       Social media
                     </label>
-                    <input
-                      type="radio"
-                      className="hidden checkbox"
-                      name="medium"
-                      id="SocialMedia"
-                      value="social media"
-                      onChange={handleChange}
-                    />
                   </div>
 
                   <div className="form-group">
-                    <label
-                      className="text-yellow border-yellow"
-                      htmlFor="google"
-                    >
-                      Google
-                    </label>
                     <input
                       type="radio"
-                      className="hidden checkbox"
+                      className="hidden "
                       name="medium"
                       id="google"
                       value="Google"
                       onChange={handleChange}
                     />
+                    <label
+                      htmlFor="google"
+                      className="text-yellow border-yellow  label-checked:bg-yellow label-checked:text-primary"
+                    >
+                      Google
+                    </label>
                   </div>
 
                   <div className="form-group">
-                    <label className="text-dim border-dim" htmlFor="others">
-                      Others
-                    </label>
                     <input
                       type="radio"
-                      className="hidden checkbox"
+                      className="hidden "
                       name="medium"
                       id="others"
                       value="Others"
                       onChange={handleChange}
                     />
+                    <label
+                      htmlFor="others"
+                      className="text-dim border-dim  label-checked:bg-dim label-checked:text-very_dim"
+                    >
+                      Others
+                    </label>
                   </div>
                 </div>
               </div>
@@ -257,24 +245,55 @@ const MoreInfo = () => {
         {/* sticker backgroung coponent  */}
         <div className="h-56 hidden"></div>
 
+        {/* Mobile view Start  */}
+
+        <div className="flex md:hidden py-32 justify-evenly items-center relative">
+          {/* background effect images start */}
+          <div className="-z-10">
+            <img
+              src={stickerhead}
+              alt="background stickers"
+              className="absolute bottom-20 right-8"
+            />
+            <img
+              src={bgsticker}
+              alt="sticker pictures"
+              className=" w-56 absolute -top-10 right-8  "
+            />
+            <div className="bg-orange w-3 h-3 rounded-full absolute bottom-10 left-10"></div>
+          </div>
+          {/* background effect images end */}
+
+          <div>
+            <img src={bookTwo} alt="Book Image" />
+          </div>
+          <div>
+            <h1 className="text-primary text-base font-bold">
+              A little bit <br /> of more info & <br />
+              <span className="text-yellow">you’re in!</span>
+            </h1>
+          </div>
+        </div>
+        {/* Mobile view End  */}
+
         <div className="flex md:flex-row justify-between flex-col">
           {/* FIRST COL  */}
           <div className="w-full md:w-1/2 ">
             <img
               src={book}
               alt="Book Ilustration"
-              className=" w-full md:w-3/4 md:mt-20"
+              className="hidden md:block w-full md:w-3/4 md:mt-20"
             />
           </div>
 
           <div className="w-full md:w-1/2 text-right ">
             <div>
-              <h1 className="header mt-8">
+              <h1 className="hidden md:block header mt-8">
                 A little bit of more info &
                 <span className="text-yellow "> you’re in!</span>
               </h1>
 
-              <div className="md:mt-20">
+              <div className="md:mt-20 ">
                 <div className="que my-2 ">
                   What feature is a no brainer for you?
                 </div>
@@ -283,14 +302,14 @@ const MoreInfo = () => {
                   type="text"
                   name="review"
                   placeholder="we’d love to hear more from you.."
-                  className="px-7 py-2 md:py-4 w-full focus:outline-none input"
+                  className="px-7 py-2 md:py-4 text-sm  md:w-full focus:outline-none input"
                   value={review}
                   onChange={handleChange}
                 />
               </div>
 
               {/* The  Poll component  */}
-              <Poll />
+              <Poll mission={mission} handleChange={handleChange} />
 
               <div>
                 <button className="mt-10 px-5 py-3 bg-yellow text-primary text-xl rounded-3xl">
@@ -302,120 +321,24 @@ const MoreInfo = () => {
 
           {/* SUCCESS MODAL CODE  */}
 
-          <div
-            className={` ${
-              submited ? "block" : "hidden"
-            }  fixed top-0 bottom-0 left-0 w-full modal`}
-            onClick={submittion}
-          >
-            <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-6/12 bg-white rounded-3xl p-4 md:px-9 md:py-12 ">
-              <div className="text-right">
-                <FaTimes
-                  className="inline text-dim cursor-pointer "
-                  onClick={submittion}
-                />
-              </div>
-              <img src={Done} alt="" className="block mx-auto" />
-
-              <div className="text-center md:text-xl font-bold mt-4 md:mt-8">
-                <span className="text-orange"> Correct guy!</span> welcome to
-                the club
-              </div>
-
-              <div className="text-center mt-8">
-                <button className="text-lg  font-bold text-primary rounded-md border-2 py-1 px-8 border-primary ">
-                  {" "}
-                  Done{" "}
-                </button>
-              </div>
-            </div>
+          <div className={submited ? "block" : "hidden"}>
+            <Success submittion={submittion} />
           </div>
 
           {/* upload Fail MODAL CODE  */}
 
-          <div
-            className={` ${
-              error ? "block" : "hidden"
-            }  fixed top-0 bottom-0 left-0 w-full modal`}
-            onClick={() => setError(!error)}
-          >
-            <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-4/12 bg-white rounded-3xl p-4 md:px-9 md:py-12 ">
-              <div className="text-right">
-                <FaTimes
-                  className="inline text-dim cursor-pointer "
-                  onClick={() => setError(false)}
-                />
-              </div>
-              {/* <img src={Done} alt="" className="block mx-auto" /> */}
-
-              <FaRegTimesCircle className="block mx-auto  text-4xl" />
-
-              <div className="text-center md:text-xl font-bold mt-4 md:mt-8">
-                <span className="text-orange"> Unable To upload !</span> Pls Try
-                again.
-              </div>
-            </div>
+          <div className={`${error ? "block" : "hidden"}`}>
+            <Failed setError={setError} error={error} />
           </div>
           {/* Loading MODAL CODE  */}
 
-          <div
-            className={` ${
-              isLoading ? "block" : "hidden"
-            }  fixed top-0 bottom-0 left-0 w-full modal`}
-          >
-            <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-4/12 bg-white rounded-3xl p-4 md:px-9 md:py-12 ">
-              <div className="text-right">
-                {/* <FaTimes className="inline text-dim cursor-pointer " /> */}
-              </div>
-
-              <div className="bg-white flex space-x-2 p-5 rounded-full justify-center items-center">
-                <div className="bg-primary p-2  w-4 h-4 rounded-full animate-bounce blue-circle"></div>
-                <div className="bg-yellow p-2 w-4 h-4 rounded-full animate-bounce green-circle"></div>
-                <div className="bg-orange p-2  w-4 h-4 rounded-full animate-bounce red-circle"></div>
-               
-              </div>
-              {/* <img src={Done} alt="" className="block mx-auto" /> */}
-
-              {/* <FaRegTimesCircle className="block mx-auto  text-4xl" /> */}
-
-              <div className="text-center md:text-xl font-bold mt-4 md:mt-8">
-                <span className="text-orange"> Loading...</span> Pls wait!
-              </div>
-            </div>
+          <div className={isLoading ? "block" : "hidden"}>
+            <Loading />
           </div>
 
           {/* Client going  Back MOdal  */}
-
-          <div
-            className={` ${
-              back ? "block" : "hidden"
-            }  fixed top-0 bottom-0 left-0 w-full modal`}
-            onClick={() => setBack(false)}
-          >
-            <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-6/12 bg-white rounded-3xl p-4 md:px-9 md:py-12 ">
-              <div className="text-right">
-                <FaTimes
-                  className="inline text-dim cursor-pointer "
-                  onClick={() => setError(false)}
-                />
-              </div>
-              <div className="relative">
-                <div
-                  className="absolute bottom-6 left-20 text-primary md:leading-9 md:text-2xl font-bold text-center
-                 "
-                >
-                  You for finish am <br />{" "}
-                  <span className="md:text-4xl">join our club o!</span>
-                </div>
-                <img src={Finish} alt="" className="block mx-auto" />
-              </div>
-              <div className="text-center mt-10">
-                <button className="back-button finish">
-                  Let’s finish this
-                </button>
-                <button className="back-button out">Take me out</button>
-              </div>
-            </div>
+          <div className={back ? "block" : "hidden"}>
+            <ExitWarning setBack={setBack} setError={setError} />
           </div>
         </div>
       </form>

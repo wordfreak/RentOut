@@ -35,8 +35,9 @@ const Platform = () => {
               Original platform
             </h1> */}
             <div className="hidden md:block pt-4 text-primary text-center md:text-left text-3xl md:text-1xl font-bold leading-10">
-              Security is a priority,
-              <br className="hidden md:block" /> and Be at peace
+              <span className="text-orange">Security</span> is a priority,
+              <br className="hidden md:block" /> and Be at{" "}
+              <span className="text-yellow">peace</span>
             </div>
             <div className="rentOut info_text leading-9 pt-5 text-center md:text-left text-text tracking-wide ">
               Rentout offers security and insurance of up to N500,000 on every

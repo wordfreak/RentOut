@@ -32,7 +32,7 @@ const HomePage = () => {
           <div className="px-4">
             <Header />
           </div>
-          <div className="px-4">
+          <div className="px-4">  
             <Account />
           </div>
           <div className="px-4">

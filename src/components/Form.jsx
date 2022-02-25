@@ -10,6 +10,7 @@ const Form = ({ button }) => {
     number: "",
     medium: "",
     review: "",
+    mission: "",
   };
 
   const [client, setClient] = useState(initialData);
@@ -56,27 +57,6 @@ const Form = ({ button }) => {
     }
   };
   // this function check the button medium button
-
-  const [friend, setFriend] = useState(false);
-  const [google, setGoogle] = useState(false);
-  const [social, setSocial] = useState(false);
-  const [others, setOthers] = useState(false);
-
-  const handleFriend = () => {
-    setFriend(!friend);
-  };
-
-  const handleGoogle = () => {
-    setGoogle(!google);
-  };
-
-  const handleSocial = () => {
-    setSocial(!social);
-  };
-
-  const handleOthers = () => {
-    setOthers(!others);
-  };
 
   return (
     <div>
@@ -152,50 +132,40 @@ const Form = ({ button }) => {
 
               <div className="gist">
                 <div className="form-group">
-                  <label
-                    className="text-primary border-primary"
-                    htmlFor="friend"
-                  >
-                    A friend
-                  </label>
                   <input
                     type="radio"
-                    className="hidden checkbox"
                     name="medium"
                     id="friend"
                     value="friend"
+                    className="hidden"
                     onChange={handleChange}
                   />
-                  <FaCheck className="icon" />
+                  <label
+                    htmlFor="friend"
+                    className="text-primary border-primary  label-checked:bg-primary label-checked:text-orange"
+                  >
+                    A Friend
+                  </label>
                 </div>
 
                 <div className="form-group">
+                  <input
+                    type="radio"
+                    className="hidden"
+                    name="medium"
+                    id="SocialMedia"
+                    value="Social Media"
+                    onChange={handleChange}
+                  />
                   <label
-                    className="text-orange border-orange"
                     htmlFor="SocialMedia"
+                    className="text-orange border-orange  label-checked:bg-orange label-checked:text-white"
                   >
                     Social media
                   </label>
-                  <input
-                    type="radio"
-                    className="hidden checkbox"
-                    name="medium"
-                    id="SocialMedia"
-                    value="social media"
-                    onChange={handleChange}
-                  />
-                  <FaCheck className="icon" />
                 </div>
 
                 <div className="form-group">
-                  <label
-                    className={`${
-                      google ? "hidden" : "text-yellow border-yellow"
-                    }`}
-                    htmlFor="google"
-                  >
-                    Google
-                  </label>
                   <input
                     type="radio"
                     className="hidden checkbox"
@@ -204,13 +174,15 @@ const Form = ({ button }) => {
                     value="Google"
                     onChange={handleChange}
                   />
-                  <FaCheck className="icon" />
+                  <label
+                    htmlFor="google"
+                    className="text-yellow border-yellow  label-checked:bg-yellow label-checked:text-primary"
+                  >
+                    Google
+                  </label>
                 </div>
 
                 <div className="form-group">
-                  <label className={`text-dim border-dim`} htmlFor="others">
-                    Others
-                  </label>
                   <input
                     type="radio"
                     className="hidden checkbox"
@@ -219,7 +191,12 @@ const Form = ({ button }) => {
                     value="Others"
                     onChange={handleChange}
                   />
-                  <FaCheck className="icon" />
+                  <label
+                    htmlFor="others"
+                    className="text-dim border-dim  label-checked:bg-dim label-checked:text-very_dim"
+                  >
+                    Others
+                  </label>
                 </div>
               </div>
             </div>

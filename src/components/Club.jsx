@@ -22,7 +22,8 @@ const Club = () => {
         <div className="w-full md:w-1/2 md:flex md:justify-center md:items-center   ">
           <div className="">
             <div className="hidden md:block pt-4 text-primary text-center md:text-right text-3xl  md:text-1xl font-bold leading-10">
-              500+ Club members <br /> and counting
+              500<span className="text-orange">+</span> Club members <br /> and
+              <span className="text-yellow"> counting</span>
             </div>
 
             {/* mobile view start */}

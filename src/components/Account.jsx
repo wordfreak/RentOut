@@ -17,7 +17,7 @@ const Account = () => {
         <div className="  w-full md:w-1/2 md:flex md:justify-center md:items-center  ">
           <div className="">
             <div className=" hidden md:block pt-4 text-primary text-center md:text-left text-3xl md:text-1xl font-bold leading-10">
-              Everyday Items, by <br /> the hour.
+              Everyday Items, by <br /> the <span className="text-yellow">hour.</span>
             </div>
 
             {/* Mobile screen Start */}
@@ -41,8 +41,7 @@ const Account = () => {
             <div className="info_text  leading-9 pt-5 text-center md:text-left  ">
               Rentout offers an easy way to bring in extra cash by renting out
               the things you don't use! <br className="md:hidden" />
-               We'll process all your requests down to
-              delivery.
+              We'll process all your requests down to delivery.
             </div>
           </div>
         </div>

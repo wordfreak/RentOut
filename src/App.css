@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,500&display=swap"); */
 
 @tailwind base;
 @tailwind components;
@@ -168,7 +168,7 @@ form button {
 }
 
 .que {
-  @apply text-lg md:text-2xl leading-9;
+  @apply text-base md:text-2xl leading-9;
 }
 .review {
   @apply py-4 my-4 text-2xl px-8;
@@ -185,7 +185,7 @@ form button {
   border-radius: 33px;
 }
 .pollButton {
-  @apply rounded-2xl md:text-lg font-bold px-4 md:py-4 py-2;
+  @apply rounded-2xl text-sm md:text-lg inline-block font-bold px-4 md:py-4 py-2;
   border: 1px solid;
 }
 
@@ -279,10 +279,13 @@ form button {
     border-radius: 0;
     min-height: auto;
   }
-
+input{
+  max-width: 282px;
+}
   .formGroup input {
     max-width: 282px;
   }
+  
 
   .formSticker {
     /* @apply; */
