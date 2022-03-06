@@ -9,7 +9,7 @@ import Logo from "../assets/img/AppLogo.svg";
 
 const Footer = () => {
   return (
-    <div className="bg-dim md:mt-20 mt-20 py-4 md:py-10 md:px-32">
+    <div className="bg-footer md:mt-20 mt-20 py-4 md:py-10 md:px-32">
       <div className="flex justify-between items-center text-center text-very_dim md:text-left md:flex-row flex-col md:text-2xl md:text-primary font-bold">
         <div className="text-center md:text-left mt-5">
           <img src={Logo} alt="" className="w-40  md:w-40  mx-auto md:mx-0" />

@@ -11,6 +11,7 @@ module.exports = {
         pink: " #FAB8C5",
         dim: "#D8D8D8;",
         very_dim: "#9A9999",
+        footer: "#fbfbfb",
       },
       fontSize: {
         "1xl": "2.50rem",
