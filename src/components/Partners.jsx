@@ -16,13 +16,13 @@ const Partners = () => {
           <img
             src={partner1}
             alt="First Partner"
-            className="grayscale md:grayscale-0 w-20"
+            className="grayscale-0 w-20"
           />
           <img src={partner2} alt="First Partner" />
           <img
             src={partner3}
             alt="First Partner"
-            className="grayscale md:grayscale-0 w-14"
+            className="grayscale-0 w-14"
           />
           <img src={partner4} alt="First Partner" className="hidden md:block" />
         </div>
