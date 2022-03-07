@@ -14,15 +14,15 @@ const Footer = () => {
         <div className="text-center md:text-left mt-5">
           <img src={Logo} alt="" className="w-40  md:w-40  mx-auto md:mx-0" />
           <div className="mt-4 md:text-2xl text-very_dim md:text-primary">
-            Elegant court , Lekki Phase 2, <br className="hidden md:block" />{" "}
+            Lekki Phase 2, 
             Lagos Nigeria
           </div>
         </div>
-        
-          <div className=" md:hidden my-4 text-center text-lg md:text-2xl text-primary md:text-right ">
-            <a href="mailto:hello@rentout.app">hello@rentout.app</a>
-          </div>
-      
+
+        <div className=" md:hidden my-4 text-center text-lg md:text-2xl text-primary md:text-right ">
+          <a href="mailto:hello@rentout.app">hello@rentout.app</a>
+        </div>
+
         <div className="mx-auto md:mx-0  md:mt-5 ">
           <div className="text-2xl text-very_dim md:text-orange flex justify-center md:justify-end mb-4">
             <a href="#" className="footer_link">
@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
 
           <div className=" md:text-right">
-            Copyright 2021
+            <span> Copyright 2022 </span>
             <a href="#" className="inline-block    md:text-primary">
               rentout.app
             </a>

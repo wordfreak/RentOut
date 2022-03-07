@@ -29,7 +29,7 @@ const Club = () => {
             {/* mobile view start */}
 
             <h1 className="md:hidden text-2xl text-center font-bold">
-              500 <span className="text-orange">+</span> Club members <br /> and
+              500<span className="text-orange">+</span> Club members <br /> and
               <span className="text-yellow"> counting</span>
             </h1>
 
